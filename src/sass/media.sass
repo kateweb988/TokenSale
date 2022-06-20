@@ -1,0 +1,316 @@
+@media screen and (max-width: 1399px) 
+   .reg__left
+      padding: 44px !important
+   .wallet-left 
+      max-width: 250px
+      padding: 26px 30px 25px 19px
+   .wallet-right__content 
+      padding: 50px 20px 0
+   .table__link
+      font-size: 12px
+   .wallet-right
+      padding-left: 249px
+   .wallet-right__scroll 
+      max-width: 101%
+      width: 101%
+@media screen and (max-width: 1199px) 
+   .wallet__box
+      flex-direction: column
+   .wallet-left
+      height: auto
+      width: 100%
+      max-width: 100%
+      position: relative
+   .wallet-right
+      padding-left: 0
+   .footer__text2
+      display: block
+   .wallet-left .footer__text 
+      display: none
+   .wallet-left__list
+      display: flex
+      padding-bottom: 10px
+      margin: 40px auto 0
+      li:last-child
+         a
+            padding-right: 0
+   .wallet-left__list a
+      width: auto
+      white-space: nowrap
+      padding-left: 0
+      padding-right: 35px
+      height: 30px
+   .wallet__logo
+      margin: 0 auto
+   .scan__table tbody tr
+      border: 0.5px solid #EFEFEF !important
+   .profile__row td:nth-child(1) 
+      padding-left: 5px
+   .scan__table td
+      color: #17181E !important
+      font-weight: 400 !important
+   td[data-label="Transaction Hash"]
+      flex-wrap: wrap
+      text-align: center !important
+      justify-content: center !important
+      &:before 
+         margin-right: 0 !important
+   .table__link
+      font-size: 12px !important
+      margin-top: 10px 
+   .wallet .footer__list 
+      justify-content: center
+      margin-top: 80px
+   .wallet__scroll
+      margin: 0 auto
+   .scan__table tbody tr td:last-child
+      border-bottom: none
+   .scan__table tbody tr td:first-child 
+      border-left: none
+   .scan__table tbody tr td:last-child 
+      border-right: none
+   .scan__table tbody tr:last-child td:first-child
+      border-left: none
+   .scan__table tbody tr:last-child td:last-child
+      border-bottom: none
+   .wallet-left__list a p
+      margin-left: 10px
+@media ( max-width: 991px )
+   .burger 
+      position: fixed
+      flex-direction: column
+      right: -150%
+      top: 0px
+      z-index: 100000
+      display: flex
+      box-sizing: border-box
+      transition: .3s all ease-in-out
+      width: auto
+      height: auto
+      background-color: #000c28
+   .burger.active 
+      right: 0px
+      top: 0px
+      max-width: 100%
+      padding: 70px 30px
+      height: 100vh
+      width: 100%
+   .menu 
+      display: flex
+      position: relative
+      top: -17px
+      right: 0px
+   .menu .button 
+      position: absolute
+      display: flex
+      z-index: 1000000
+      right: -8px
+      top: -8px
+      width: 40px
+      height: 19px
+      align-items: center
+      justify-content: center
+      margin-left: auto
+   .menu .button.active 
+      position: fixed
+      right: 18px
+      top: 50px
+   .menu .button span 
+      position: absolute
+      top: calc(50% - 1px)
+      transition: .3s all ease-in-out
+      width: 24px
+      height: 3px
+      border-radius: 1px
+      background-color: $orange
+   .menu .button span::before 
+      content: ''
+      position: absolute
+      top: -8px
+      transition: .3s all ease-in-out
+      width: 24px
+      height: 3px
+      border-radius: 1px
+      background-color: $orange
+   .menu .button span::after 
+      content: ''
+      position: absolute
+      bottom: -8px
+      transition: .3s all ease-in-out
+      width: 24px
+      height: 3px
+      border-radius: 1px
+      background-color: $orange
+   .menu .button.active span 
+      background-color: transparent !important
+      width: 24px
+      .menu .button.active span::before 
+      content: ''
+      width: 24px
+      top: calc(50% - 2px)
+      transform: rotate(45deg)
+      background-color: $orange
+   .menu .button.active span::after 
+      content: ''
+      bottom: calc(50% - -7px)
+      transform: rotate(-86deg)
+      background-color: $orange
+      width: 24px
+   .burger .nav__list 
+      display: block !important
+      text-align: center
+      max-width: 100%
+      a 
+         color: #fff
+         text-align: center
+         margin-bottom: 20px
+         display: block
+   .reg__right
+      display: none
+   .wallet-right__top
+      display: none !important
+   .burger .wallet-right__top 
+      display: block !important
+      padding: 0
+      background: transparent
+      .wallet-right__link, .wallet-right__name, .new-select
+         color: #FFFFFF
+   .select
+      justify-content: center
+      margin: 0 auto
+   .wallet-right__wrap
+      margin-top: 10px
+   .wallet-right__wrap
+      flex-direction: column
+   .wallet-right__lan li:first-child a 
+      padding-left: 0
+      margin-left: 0
+   .wallet-right__info
+      margin-left: 0
+      margin-top: 16px
+   .new-select__list
+      top: 36px
+   .wallet__scroll
+      overflow-x: scroll
+      width: 100%
+   .wallet__scroll
+      display: none !important
+   .burger .wallet-left__list
+      display: block !important
+      width: max-content
+      margin: 40px auto 0
+      li 
+         width: max-content
+         margin-bottom: 5px
+         a 
+            padding-right: 0
+   .adaptive-table tr
+      margin: 15px
+@media screen and (max-width: 767px)
+   .menu .button
+      top: -8px
+   td[data-label="Transaction Hash"]
+      flex-direction: column
+      align-items: center !important
+   .table__link
+      margin-top: 4px
+   .adaptive-table tr
+      margin: 0 0 15px
+   .wallet-right__scroll 
+      max-width: 102%
+      width: 102%
+@media screen and (max-width: 576px)
+   input, textarea, select 
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   .reg__left 
+      padding: 40px 0 20px !important
+      height: 100%
+   .reg__top
+      flex-direction: column
+   .reg__login
+      width: 100% !important
+      margin-top: 40px
+   .reg__wrap
+      margin: 80px auto 0
+   .reg, .reg .container 
+      height: 100% !important
+   .reg__name 
+      font-size: 21px
+      margin-bottom: 25px
+   .footer__flex
+      flex-direction: column-reverse
+   .footer__text
+      margin-right: 0
+      margin-top: 20px
+      text-align: center
+   .footer__list
+      flex-direction: column 
+      text-align: center
+      li 
+         margin: 0 0 15px !important
+   .footer__flex 
+      margin-top: 120px
+   .reg__sub
+      font-size: 16px
+   .wallet-left__list a p
+      margin-left: 10px
+   .wallet-item__info
+      flex-direction: column
+   .wallet-item__icon
+      margin-right: 0
+      margin-bottom: 20px
+   .wallet-item__row
+      text-align: center
+      justify-self: center
+      flex-direction: column
+   .wallet-item__balance, .wallet-item__sum, .wallet-item__usdt, .wallet-item__sum2
+      margin-bottom: 5px
+   .wallet-item__el
+      flex-direction: column
+   .wallet-item__code
+      margin: 0 auto 10px
+   .wallet-item__address
+      text-align: center
+   .wallet-item__bottom
+      flex-direction: column
+   .wallet-item__btn
+      width: 100%
+      margin-top: 20px
+   .wallet-item__flex
+      margin-bottom: 15px
+   .wallet-item
+      padding: 20px 20px 30px
+      width: 88%
+   .wallet-item__link
+      font-size: 12px
+   .menu .button 
+      top: -16px
+      right: -22px
+   .adaptive-table tbody
+      padding-top: 0
+   .wallet__title
+      text-align: center
+   .profile__row
+      margin: 0 auto 20px !important
+   .wallet .footer__list p 
+      position: absolute
+      margin-left: -42px
+      bottom: 15px
+      left: 50%
+   .wallet .footer
+      padding-bottom: 40px
+   .menu .button
+      top: -6px
+   .menu .button.active
+      top: 32px
+   .lang_select:hover .main_submenu--list 
+      transform: translateX(-56%) translateY(-31%)
+   .wallet-right__scroll
+      max-width: 104%
+      width: 104%
+   .wallet__load
+      width: 100%
+   .adaptive-table td, .adaptive-table .profile__row .active
+      align-items: center

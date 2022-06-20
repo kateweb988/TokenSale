@@ -1,0 +1,102 @@
+body
+   font-weight: 400
+   font-size: 14px
+   line-height: 100%
+   color: #FFFFFF
+   background: #FFFFFF
+   font-family: 'DM Sans', sans-serif
+a
+   text-decoration: none
+   box-sizing: border-box
+   &:hover
+      color: $orange
+.container
+   padding: 0 15px
+   max-width: 1105px
+   margin: 0 auto
+   @media ( max-width: 1199px )
+      max-width: 960px
+   @media (max-width: 991px)
+      max-width: 720px
+   @media (max-width: 767px)
+      max-width: 540px
+.btn
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: all 0.5s ease
+   border-radius: 5px
+   width: 140px
+   height: 40px
+   font-weight: 700
+   font-size: 14px
+   color: #FFFFFF
+.btn1
+   background: $orange
+   border: 2px solid transparent
+   &:hover
+      border: 2px solid $orange
+      color: $orange
+      background: transparent
+.btn2
+   background: $green
+   border: 2px solid transparent
+   &:hover
+      background: transparent
+      border: 2px solid $green
+      color: $green
+.btn3
+   background: transparent
+   border: 1px solid #FFFFFF
+   width: 180px
+   height: 50px
+   color: #FFFFFF
+   &:hover
+      background: $orange
+      color: #FFFFFF
+      border: 1px solid $orange
+.d-flex
+   display: flex
+.body-wrap
+   overflow: hidden
+   position: relative
+   display: flex
+   flex-direction: column
+   min-height: 100vh
+footer
+   margin-top: auto
+h2
+   font-weight: 700
+   font-size: 24px
+   line-height: 31px
+   color: $black
+ul 
+   margin: 0
+   padding: 0
+   list-style-type: none
+p
+   margin: 0
+a
+   transition: all 0.5s ease
+   box-sizing: border-box
+li
+   a
+      transition: all 0.5s ease
+button
+   cursor: pointer
+   box-sizing: border-box
+textarea
+   &:focus
+      outline: none
+input
+   box-sizing: border-box
+   transition: all 0.5s ease
+   border: 2px solid transparent !important
+   &:focus 
+      border: 2px solid $orange !important
+   &:focus-visible
+      outline: initial
+path
+   transition: 0.5s
+div 
+   box-sizing: border-box

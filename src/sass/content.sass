@@ -1,0 +1,373 @@
+.reg
+   background: $black
+   height: 100vh
+   .container 
+      display: flex
+      flex-direction: column
+      height: 100vh
+      max-width: 100%
+      width: 100%
+.reg__box
+   justify-content: space-between
+   align-items: flex-start
+.reg__right
+   position: relative
+   max-width: 385px
+   width: 100%
+   flex: 1 0 auto
+   height: 100vh
+   overflow: hidden
+   &:after 
+      content: ""
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba(251, 165, 30, 0.6)
+      left: 0
+      top: 0
+   &:before
+      content: ""
+      display: block
+      position: absolute
+      left: 234px
+      bottom: -169px
+      width: 100%
+      height: 1122.7px
+      background: rgba(240, 155, 21, 0.6)
+      transform: rotate(33.6deg)
+.reg__img
+   width: 100%
+   object-fit: cover
+   height: 100%
+.reg__fig
+   position: absolute
+   right: 46px
+   top: 38px
+   z-index: 2
+.reg__fig2
+   position: absolute
+   left: 22px
+   bottom: 38px
+   z-index: 2
+.reg__left
+   max-width: 990px
+   width: 100%
+   padding: 44px 0 53px 64px
+   display: flex
+   flex-direction: column
+   margin: 0 auto
+   height: 100vh
+   overflow-y: auto
+.reg__top
+   justify-content: space-between
+   align-items: center
+.reg__wrap
+   max-width: 521px
+   width: 100%
+   margin: 194px auto 0
+.reg__name
+   font-weight: 700
+   font-size: 26px
+   line-height: 34px
+   color: #FFFFFF
+   margin-bottom: 47px
+.reg-form
+   width: 100%
+   input 
+      width: 100%
+      height: 60px
+      background: #FFFFFF
+      border-radius: 5px
+      padding-left: 51px
+      font-size: 14px
+      border: none
+      margin-bottom: 25px
+      &.pass 
+         background: url(img/form/lock.svg) no-repeat 16px 17px
+         background-color: #FFFFFF
+      &.email
+         background: url(img/form/mail.svg) no-repeat 18px 17px
+         background-color: #FFFFFF
+.reg-form__btn
+   width: 100%
+   height: 60px
+   font-size: 16px
+   margin-top: 20px
+.footer__text
+   font-weight: 500
+   font-size: 12px
+   line-height: 16px
+   color: #737373
+   margin-right: 20px
+.footer__list 
+   flex-wrap: wrap
+   li 
+      margin-right: 25px 
+      a 
+         font-weight: 500
+         font-size: 12px
+         line-height: 16px
+         color: #FFFFFF
+         &:hover 
+            color: $orange
+.password 
+	position: relative
+.password-control, .password-control2 
+	position: absolute
+	top: 21px
+	right: 21px
+	display: inline-block
+	width: 20px
+	height: 20px
+	background: url(img/form/eye.svg) 0 0 no-repeat
+.password-control.view 
+	background: url(img/form/eye.svg) 0 0 no-repeat
+.footer__flex
+   margin-top: 60px
+.reg__forgot
+   margin-left: auto
+   margin-top: 20px
+   font-weight: 500
+   font-size: 14px
+   line-height: 18px
+   color: #FFFFFF
+   display: block
+   width: max-content
+   border-bottom: 1px solid #fff
+   &:hover 
+      color: $orange
+      border-bottom: 1px solid $orange
+.forgot 
+   .reg__name
+      margin-bottom: 10px !important
+.reg__sub
+   font-size: 18px
+   line-height: 23px
+   margin-bottom: 25px
+.footer__text2
+   display: none
+
+.header--lang 
+   position: relative
+   display: flex
+   align-items: center
+   @media( max-width: 992px )
+      justify-content: center
+   &::before
+      content: ""
+      display: inline-block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $orange
+      margin-right: 12px
+.main_menu
+	position: relative
+	display: flex
+	height: 100px
+	&--item
+		display: flex
+		align-items: center
+		padding: 0 20px
+	&--lnk
+		transition: color .2s
+		&:hover
+	&--close_button
+		display: none
+	@media ( max-width: 1000px )
+		margin-right: -20px
+		padding-right: 20px
+		padding-top: 40px
+		padding-bottom: 15px
+		height: 100%
+		flex-direction: column
+		overflow-y: scroll
+		&--item
+			padding: 10px 20px
+		&--close_button
+			display: block
+		&--close_icon
+			position: absolute
+			right: 30px
+			top: 10px
+			width: 12px
+			height: 12px
+			&:hover
+.main_submenu
+   position: relative
+   padding-right: 40px
+   cursor: pointer
+   @media( max-width: 992px )
+      margin-right: -15px
+   &--btn
+   &--icon
+      position: absolute
+      top: calc(50% - 6px)
+      right: 20px
+      width: 12px
+      height: 12px
+      transform: rotate(0)
+      transform-origin: 50% 50% 0
+      transition: transform, stroke
+   &--list
+      display: flex
+      flex-direction: column
+      position: absolute
+      left: 50%
+      top: 90px
+      padding: 20px 10px
+      width: auto
+      max-width: none
+      background: #fff
+      border-radius: 3px
+      box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.1)
+      transition: transform .2s, opacity .2s
+      z-index: 100
+      @media( min-width: 1001px ) 										
+         transform: translateX(-50%) translateY(150px)
+         opacity: 0
+         visibility: hidden
+      &:before
+         content: ''
+         display: block
+         position: absolute
+         left: 50%
+         top: -8px
+         width: 17px
+         height: 17px
+         transform: translateX(-50%) rotate(45deg)
+         background: #fff
+   &--subitem
+      transition: transform .1s
+      @media( min-width: 1001px )
+         transform: rotateX(90deg)
+   &--lnk
+      display: block
+      padding: 15px 10px 15px 20px
+      white-space: nowrap
+      transition: color .2s
+      &-padding_equal
+         padding: 10px 15px
+      &:hover
+   &:hover
+      .main_submenu--btn
+      @media( min-width: 1001px ) 											// раскрытие подпунктов меню в PC версии (до 1001px)
+         .main_submenu--icon
+            transform: rotate(-180deg)
+         .main_submenu--list
+            transform: translateX(-50%) translateY(0)
+            opacity: 1
+            visibility: visible
+         .main_submenu--subitem
+            transform: rotateX(0)
+            opacity: 1
+            transition-delay: .8s
+            &:nth-child(1)
+               transition-delay: .05s
+            &:nth-child(2)
+               transition-delay: .1s
+            &:nth-child(3)
+               transition-delay: .15s
+            &:nth-child(4)
+               transition-delay: .2s
+            &:nth-child(5)
+               transition-delay: .25s
+            &:nth-child(6)
+               transition-delay: .3s
+            &:nth-child(7)
+               transition-delay: .35s
+            &:nth-child(8)
+               transition-delay: .4s
+            &:nth-child(9)
+               transition-delay: .45s
+            &:nth-child(10)
+               transition-delay: .5s
+            &:nth-child(11)
+               transition-delay: .55s
+            &:nth-child(12)
+               transition-delay: .6s
+            &:nth-child(13)
+               transition-delay: .65s
+            &:nth-child(14)
+               transition-delay: .7s
+            &:nth-child(15)
+               transition-delay: .75s
+   @media ( max-width: 1000px )
+      &.main_menu--item
+         flex-wrap: wrap
+         .main_submenu--list
+            display: none
+            position: relative
+            left: auto
+            top: auto
+            padding: 10px 0 0
+            width: 100%
+            background: none
+            border-radius: 0
+            box-shadow: none
+            z-index: auto
+            &:before
+               display: none
+			.main_submenu--lnk
+				padding: 10px
+			.main_submenu.active
+				.main_submenu--icon
+					transform: rotate(-180deg)
+.lang_select
+   position: relative
+   display: flex
+   height: 50px
+   &--selected
+      font-weight: 700
+      font-size: 14px
+      line-height: 18px
+      color: #17181E
+      display: flex
+      align-items: center
+      cursor: pointer
+      transition: 0.5s
+      &:hover 
+         color: $orange
+      @media( max-width: 992px )
+         color: #fff
+   &.main_submenu
+      @media( max-width: 1000px )
+         .main_submenu--list
+            transform: translateX(-50%) translateY(50px)
+            opacity: 0
+            visibility: hidden
+         .main_submenu--subitem
+            transform: rotateX(90deg)
+			&:hover											// раскрытие подпунктов меню в PC версии (до 1001px)
+				.main_submenu--icon
+					transform: rotate(-180deg)
+				.main_submenu--list
+					transform: translateX(-50%) translateY(-31%)
+					opacity: 1
+					visibility: visible
+				.main_submenu--subitem
+					transform: rotateX(0)
+					opacity: 1
+					transition-delay: .3s
+					&:nth-child(1)
+						transition-delay: .05s
+					&:nth-child(2)
+						transition-delay: .1s
+					&:nth-child(3)
+						transition-delay: .15s
+					&:nth-child(4)
+						transition-delay: .2s
+					&:nth-child(5)
+						transition-delay: .25s
+      @media( max-width: 575px )
+         transform: translateX(-56%) translateY(-31%)
+.wallet-right__scroll::-webkit-scrollbar
+   height: 1px
+   width: 1px
+.wallet-right__scroll::-webkit-scrollbar-track
+   background: transparent
+   border-radius: 3px
+.wallet-right__scroll::-webkit-scrollbar-thumb
+   background-color: transparent
+   border-radius: 6px

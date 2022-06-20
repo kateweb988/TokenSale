@@ -1,0 +1,515 @@
+.wallet-left 
+   flex: 1 0 auto 
+   width: 100%
+   max-width: 300px
+   background: $black
+   padding: 26px 30px 25px
+   height: 100vh
+   display: flex
+   flex-direction: column
+   position: fixed
+   .footer__text
+      margin-right: 0
+      margin-top: auto
+.wallet-right__top
+   padding: 13px 30px 13px 43px
+   background: #EAEAEA
+   align-items: center
+   justify-content: space-between
+.wallet-right
+   width: 100%
+   padding-left: 292px
+   padding-bottom: 25px
+.wallet__logo
+   width: 150px
+   display: block
+   img 
+      width: 100%
+      height: 100%
+.wallet-left__list
+   margin-top: 63px
+   .active 
+      p 
+         color:#FBA51E
+      path 
+         fill:  #FBA51E
+   a 
+      align-items: center
+      width: 240px
+      height: 50px
+      margin-bottom: 1px
+      border-radius: 5px
+      padding-left: 37px
+      &:hover 
+         background: #0D0D0F
+      p 
+         font-size: 16px
+         line-height: 320%
+         color: #FFFFFF
+         margin-left: 25px
+.select
+   box-sizing: border-box
+   appearance: none 
+   // background: url(img/wallet/down.svg) no-repeat right
+   background-position-x: calc(100% - 6px)
+   cursor: pointer
+   display: flex
+   align-items: center
+   overflow: visible
+   position: relative
+   height: auto
+   background-color: transparent
+   border: none
+   width: 100%
+   max-width: 191px
+   font-weight: 700
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   &::before
+      content: ""
+      display: inline-block
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $orange
+      margin-right: 12px
+   &:after 
+      content: ""
+      display: block
+      background: url(img/wallet/down.svg) no-repeat right
+      width: 12px
+      height: 12px
+      margin-left: 8px
+.new-select 
+   cursor: pointer
+   user-select: none
+   overflow: visible
+   font-style: normal
+   font-weight: 700
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   overflow: hidden
+   text-overflow: ellipsis
+   white-space: nowrap
+   max-width: 150px
+.new-select__list 
+   position: absolute
+   top: 20px
+   left: 0
+   cursor: pointer
+   width: 100%
+   z-index: 2
+   user-select: none
+   border-top: none
+   border-radius: 0px 0px 5px 5px
+   max-height: 120px
+   overflow: scroll
+   overflow-x: visible
+   background: rgb(227, 227, 227)
+.new-select__list.on
+   display: block
+.new-select__item span 
+   display: block
+   padding: 9px 19px 9px 23px
+   color: black
+   border-bottom: 1px solid #E8E8E8
+   font-size: 14px
+.new-select__item span:hover 
+   color: white
+   background: $orange
+.new-select:after 
+   content: ''
+   display: block
+   width: 100%
+   height: 100%
+   position: absolute
+   right: 9px
+   top: 9px
+   opacity: 0.6
+   -webkit-transition: all .27s ease-in-out
+   -o-transition: all .27s ease-in-out
+   transition: all .27s ease-in-out
+   -webkit-transform: rotate(0deg)
+   -ms-transform: rotate(0deg)
+   -o-transform: rotate(0deg)
+   transform: rotate(0deg)
+.new-select.on:after 
+   -webkit-transform: rotate(180deg)
+   -ms-transform: rotate(180deg)
+   -o-transform: rotate(180deg)
+   transform: rotate(180deg)
+.arcticmodal-container::-webkit-scrollbar-track, .arcticmodal-container::-webkit-scrollbar-track
+   background: transparent
+html * /* override x.xhtml.ru style */ 
+   scrollbar-width: thin
+   scrollbar-color: blue orange
+*::-webkit-scrollbar, html *::-webkit-scrollbar
+   height: 7px
+   width: 7px
+.arcticmodal-container::-webkit-scrollbar, .arcticmodal-container::-webkit-scrollbar
+   width: 1px
+   height: 1px
+*::-webkit-scrollbar-track, html *::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+*::-webkit-scrollbar-thumb, html *::-webkit-scrollbar-thumb
+   background-color: $orange
+   border-radius: 6px
+.adaptive-table 
+   width: 100%
+   box-sizing: border-box
+   border-collapse: collapse !important
+   border-spacing: 0px 15px !important
+   td 
+      padding: 15px 5px
+      font-weight: 400
+      font-size: 14px
+      box-sizing: border-box
+      color: $black
+@media (max-width: 1199px) 
+   .adaptive-table,
+   .adaptive-table .profile__operation 
+      a 
+         font-size: 11px
+   .adaptive-table
+      thead, .profile__head
+         display: none
+   .adaptive-table 
+     tbody, .adaptive-table, 
+         width: 100%
+         display: flex
+         flex-wrap: wrap
+         justify-content: center
+         border: 0 none
+         overflow: hidden !important
+         padding-top: 10px
+         padding-bottom: 10px
+   .adaptive-table
+      tr 
+         margin: 5px
+         width: 300px
+         max-width: 100%
+         display: flex
+         flex-direction: column
+   .adaptive-table
+      td, .profile__row .active 
+         display: flex
+         justify-content: space-between
+   .adaptive-table 
+      td[data-label] 
+         justify-content: space-between
+         text-align: right
+   .adaptive-table
+      td[data-label]
+         &:before 
+            line-height: 120%
+            content: attr(data-label)
+            display: block
+            white-space: inherit
+            opacity: .7
+            text-align: left
+            margin-right: 20px
+/* ===================== /adaptive tables =====================  */
+.table__flex
+   align-items: center
+   max-width: 140px
+.profile__table
+   border-collapse: collapse
+   margin-bottom: 17px
+   tr 
+      border-bottom: 0.857372px solid #EFEFEF
+      box-sizing: border-box
+      &:last-child
+         border: none
+         td
+            &:first-child
+               border-radius: 0px 0px 0px 20px
+            &:last-child
+               border-radius: 0px 0px 20px 0px
+   thead
+      tr
+         padding: 10px 20px 10px 6px
+         border-spacing: initial
+         box-shadow: initial
+         td
+            font-weight: 400
+            font-size: 14px 
+            color: white
+            padding: 18px 20px 18px 6px
+            font-weight: normal !important
+   @media (max-width: 768px) 
+      background: transparent
+      margin-top: 0
+      td
+         background: #fff
+      td[data-label="Name"] 
+         padding-right: 5px
+.profile__row
+   border-collapse: separate
+   border-spacing: inherit
+   background: #FFFFFF
+   margin-bottom: 15px
+   td:nth-child(1)
+      padding-left: 32px
+      text-align: left
+      @media ( max-width: 1199px )
+         padding-left: 15px
+.about__wrap
+   position: relative
+   top: 17px
+.adaptive-table
+   border-collapse: separate
+   tr 
+      @media ( max-width: 991px )
+         margin: 15px
+         &:nth-child(n+7)
+            display: none
+      @media ( max-width: 767px )
+         width: 100%
+         overflow: hidden
+.scan__table thead tr
+   background: $black
+.scan__table tbody tr:first-child td:nth-child(2)
+   width: auto
+.scan__table tbody tr td:first-child
+   border-left: 0.5px solid #EFEFEF
+.scan__table tbody tr td:last-child
+   border-right: 0.5px solid #EFEFEF
+.scan__table
+   border-collapse: separate !important
+   border-spacing: 0px !important
+   thead 
+      td
+         border: none
+         &:first-child
+            border-radius: 5px 0 0 0px !important
+         &:last-child
+            border-radius: 00px 5px 0 0px !important
+   tbody tr:last-child
+      background: #fff
+      td:first-child
+         border-radius: 0px 0 0 5px
+         border: 0.5px solid #EFEFEF
+         border-right: none
+         border-top: none
+      td:last-child
+         border-radius: 0px 0px 5px 0px
+         border: 0.5px solid #EFEFEF
+         border-left: none
+         border-top: none
+   td
+      border: none
+      border-bottom: 0.5px solid #EFEFEF
+   .table__row
+      justify-content: flex-start
+      .table__num
+         margin-left: 5px
+      .table__flex_main
+         min-width: 170px
+.menu, .burger 
+   display: none
+.wallet-right__link
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   margin-left: 10px
+   &:hover 
+      color: $orange 
+.wallet-right__lan 
+   .active 
+      a
+         color: $orange !important
+         font-weight: 700
+.wallet-right__wrap
+   align-items: center
+.wallet-right__info
+   margin-left: 20px
+.wallet-right__ava 
+   border: 1px solid #FBA51E
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 44px
+   height: 44px
+   border-radius: 50%
+   background: #C4C4C4
+   box-shadow: inset 0 0 0 2px #fff
+   img 
+      width: auto
+      height: auto
+.wallet-right__info
+   align-items: center
+   cursor: pointer
+   &:hover 
+      .wallet-right__name
+         color: $orange
+.wallet-right__name
+   margin-left: 13px
+   font-weight: 500
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   margin-right: 7px
+   transition: 0.5s
+.wallet-right__content
+   padding: 50px 30px 0 43px
+.wallet-item__btn
+   color: #088C60
+.wallet-item
+   width: 450px
+   height: auto
+   border-radius: 5px
+   padding: 30px 20px 30px 30px
+   background: #088C60
+   margin-right: 20px
+   flex: 1 0 auto
+   max-width: 450px
+   &:nth-child(2n)
+      background: #343434
+      .wallet-item__btn
+         color: #343434
+.wallet-right__flex
+   margin-bottom: 0px
+.wallet-item__flex
+   justify-content: space-between
+   align-items: center
+   margin-bottom: 30px
+   flex-wrap: wrap
+.wallet-item__icon
+   width: 50px
+   height: 50px
+   border-radius: 50%
+   margin-right: 17px
+.wallet-item__info
+   align-items: center
+   margin-bottom: 10px
+   width: 100%
+.wallet-item__balance, .wallet-item__sum
+   font-weight: 700
+   font-size: 24px
+   line-height: 100%
+   margin-bottom: 2px
+.wallet-item__usdt, .wallet-item__sum2
+   font-size: 20px
+   line-height: 100%
+.wallet-item__el
+   align-items: flex-start
+   flex-direction: column
+.wallet-item__code
+   width: 80px
+   height: 80px
+   margin-right: 0
+   margin-bottom: 20px
+   border-radius: 3px
+.wallet-item__address
+   font-weight: 700
+   font-size: 16px
+   line-height: 100%
+   margin-bottom: 1px
+.wallet-item__link
+   white-space: nowrap
+   font-weight: 400
+   font-size: 14px
+   color: white 
+   display: flex
+   align-items: center
+   .svg 
+      margin-left: 10px
+   &:hover 
+      color: $orange
+      path 
+         fill: $orange
+.wallet-item__btn 
+   width: 85px
+   height: 40px
+   background: #FFFFFF
+.wallet-item__bottom
+   align-items: center 
+   justify-content: space-between
+.wallet-item__row 
+   justify-content: space-between
+   width: 100%
+   flex-wrap: wrap
+   margin-bottom: 5px
+.wallet-item__content
+   width: 100%
+.wallet__title
+   margin-bottom: 15px
+   font-weight: 700
+   font-size: 24px
+   line-height: 31px
+   color: $black
+.table__btn 
+   width: 91px
+   height: 25px
+   background: #088C60
+   border-radius: 3px
+   color: #fff
+   font-weight: 400
+   font-size: 12px
+   border: 1px solid transparent
+   &:hover 
+      background: transparent
+      color: #088C60
+      border: 1px solid #088C60
+.wallet__load 
+   width: 140px
+   height: 40px
+   margin: 0 auto
+   font-size: 14px
+td[data-label="Amount"]
+   font-weight: 700
+   font-size: 14px
+td[data-label="Date"] 
+   font-size: 14px
+   line-height: 100%
+   color: #888888
+   font-weight: 400
+.table__row
+   align-items: center
+.table__logo
+   width: 30px
+   height: 30px
+   border-radius: 50%
+.table__text
+   font-weight: 400
+   font-size: 14px
+   line-height: 100%
+   margin-left: 12px
+.table__link
+   font-weight: 400
+   font-size: 14px
+   line-height: 100%
+   color: #027DC2
+   border-bottom: 1px solid #027DC2
+   width: max-content
+   &:hover 
+      border-bottom: 1px solid $orange
+.wallet 
+   .footer
+      padding-top: 23px
+      a 
+         color: #888888
+.wallet-left__hide
+   position: absolute
+   right: 27px
+   top: 28px
+   &:hover
+      path 
+         fill: white
+   @media ( max-width: 1200px )
+      display: none
+.wallet-right__scroll 
+   overflow-x: auto
+   max-width: 102%
+   width: 102%
+   padding-bottom: 25px
+   margin-bottom: 25px
+   -webkit-touch-callout: none
+   -webkit-user-select: none  
+   -khtml-user-select: none   
+   -moz-user-select: none   
+   -ms-user-select: none     
+   user-select: none
