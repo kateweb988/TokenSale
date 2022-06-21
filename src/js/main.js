@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 });
+$(document).ready(function () {
+   $('.js-example-basic-single').select2();
+});
 $('body').on('click', '.password-control', function () {
    if ($('#password-input').attr('type') == 'password') {
       $(this).addClass('view');
@@ -17,6 +20,26 @@ $('body').on('click', '.password-control2', function () {
    } else {
       $(this).removeClass('view');
       $('#password-input2').attr('type', 'password');
+   }
+   return false;
+});
+$('body').on('click', '.password-control3', function () {
+   if ($('#password-input3').attr('type') == 'password') {
+      $(this).addClass('view');
+      $('#password-input3').attr('type', 'text');
+   } else {
+      $(this).removeClass('view');
+      $('#password-input3').attr('type', 'password');
+   }
+   return false;
+});
+$('body').on('click', '.password-control4', function () {
+   if ($('#password-input4').attr('type') == 'password') {
+      $(this).addClass('view');
+      $('#password-input4').attr('type', 'text');
+   } else {
+      $(this).removeClass('view');
+      $('#password-input4').attr('type', 'password');
    }
    return false;
 });
@@ -82,12 +105,68 @@ $('.menu .button').click(function (event) {
    $('.burger').toggleClass('active');
    return false;
 });
-$(document).mouseup(function (e) {
-   var container = $(".drop");
-   if (container.has(e.target).length === 0) {
-      container.removeClass('visible');
-   }
+$('.my').change(function () {
+   if ($(this).val() != '') $(this).prev().text('Выбрано файлов: ' + $(this)[0].files.length);
+   else $(this).prev().text('Выберите файлы');
 });
+$(window).on('load', function () {
+   $(".calc__btn_one").prop('disabled', !$("input[name='formK']:checked").length);
+   $("input[name='formK']").on('change', function () {
+      $(".calc__btn_one").prop('disabled', !$("input[name='formK']:checked").length);
+   });
+   $(".calc__btn_two").prop('disabled', !$("input[name='formT']:checked").length);
+   $("input[name='formT']").on('change', function () {
+      $(".calc__btn_two").prop('disabled', !$("input[name='formT']:checked").length);
+   });
+   $(".calc__btn_three").prop('disabled', !$("input[name='formA']:checked").length);
+   $("input[name='formA']").on('change', function () {
+      $(".calc__btn_three").prop('disabled', !$("input[name='formA']:checked").length);
+   });
+   $(".calc__btn_fourth").prop('disabled', !$("input[name='formA']:checked").length);
+   $("input[name='formA']").on('change', function () {
+      $(".calc__btn_fourth").prop('disabled', !$("input[name='formA']:checked").length);
+   });
+});
+$('.calc__btn_one').click(function (event) {
+   $('.calc__one').css('display', 'none');
+   $('.calc__two').fadeIn();
+   return false;
+});
+$('.calc__btn_two').click(function (event) {
+   $('.calc__two').css('display', 'none');
+   $('.calc__three').fadeIn();
+   return false;
+});
+$('.calc__btn_three').click(function (event) {
+   $('.calc__three').css('display', 'none');
+   $('.calc__fourth').fadeIn();
+   return false;
+});
+$('.calc__btn_three').click(function (event) {
+   $('.calc__three').css('display', 'none');
+   $('.calc__four').fadeIn();
+   return false;
+});
+// Accordeon
+$(document).ready(function () {
+   $(".set > a").on("click", function () {
+     if ($(this).hasClass('active')) {
+       $(this).removeClass("active");
+       $(this).siblings('.content').slideUp(200);
+       $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+     }
+     else {
+       $(".set > a i").removeClass("fa-minus").addClass("fa-plus");
+       $(this).find("i").removeClass("fa-plus").addClass("fa-minus");
+       $(".set > a").removeClass("active");
+       $(this).addClass("active");
+       $('.content').slideUp(200);
+       $(this).siblings('.content').slideDown(200);
+     }
+     return false
+   });
+ 
+ });
 jQuery('img.svg').each(function () {
    var $img = jQuery(this);
    var imgID = $img.attr('id');

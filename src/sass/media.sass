@@ -1,3 +1,14 @@
+@media screen and (max-width: 1799px) 
+   .supp__left
+      max-width: 529px
+@media screen and (max-width: 1599px) 
+   .supp__flex
+      flex-direction: column
+      align-items: flex-start
+   .supp__item:nth-child(2) .supp__block
+      margin-left: 0
+   .supp__item:nth-child(1)
+      margin-bottom: 20px
 @media screen and (max-width: 1399px) 
    .reg__left
       padding: 44px !important
@@ -13,6 +24,27 @@
    .wallet-right__scroll 
       max-width: 101%
       width: 101%
+   .calc__form input
+      width: 367px
+   .calc__fourth_box
+      margin-left: 250px
+   .supp__el input 
+      margin-right: 0 !important
+      width: 100%
+   #def-form
+      max-width: 500px
+   .def__sum
+      width: max-content
+   .def__farm 
+      width: 100px
+      height: 30px
+      margin-left: auto
+      margin-right: 10px
+   .def__sum 
+      font-size: 12px
+      img 
+         flex: 1 0 auto 
+         max-width: 16px
 @media screen and (max-width: 1199px) 
    .wallet__box
       flex-direction: column
@@ -75,6 +107,46 @@
       border-bottom: none
    .wallet-left__list a p
       margin-left: 10px
+   .calc__three_wrap .calc__form__item
+      margin: 0 auto 20px
+   .calc__three .reg-form__btn
+      margin: 20px auto 0
+   .calc__fourth_box
+      margin: 20px auto 0
+   .settings .wallet-right__content
+      height: 100%
+   .supp__el
+      max-width: 100%
+   .support
+      .wallet-right__content
+         height: 100% !important
+   .supp__right
+      width: 100%
+   .def__sum
+      font-size: 16px
+   .def__body td[data-label]:before
+      display: none
+   .def__body td 
+      text-align: center !important
+      justify-content: center !important
+   .def__body .def__sum 
+      margin: 5px auto
+   .def__farm
+      margin: 0 auto
+   .def__body .profile__row:first-child td
+      border-top: none !important
+   .scan__table .def__body tr:last-child td:last-child
+      border-right: none !important
+   .def__line
+      text-align: left
+      flex-wrap: wrap 
+      max-width: 255px
+   .pad 
+      border-right: none !important
+      &:before 
+         display: none !important
+   .def .wallet-right__content
+      min-height: auto
 @media ( max-width: 991px )
    .burger 
       position: fixed
@@ -206,6 +278,55 @@
             padding-right: 0
    .adaptive-table tr
       margin: 15px
+   .calc__form input
+      margin-right: 0
+      margin-bottom: 20px
+   .calc__form_flex
+      flex-direction: column
+   .calc__form__item
+      width: max-content
+   .calc__two_flex
+      flex-direction: column 
+   .calc__two_code
+      margin-right: 0
+      margin-bottom: 20px
+   .calc__two_content
+      text-align: center
+   .calc__form .reg-form__btn
+      margin: 20px auto 0
+   .calc__elem
+      justify-content: center
+      margin: 0 auto
+      display: flex
+      flex-direction: column
+      align-items: center
+   .calc__form .lang_select--selected
+      width: 367px
+   .calc__form .lang_select:hover .main_submenu--list 
+      width: 100%
+      transform: translateX(-50%) translateY(-24%)
+   .calc__form .password-control, .calc__form .password-control2, .calc__form .password-control3, .calc__form .password-control4 
+      right: 18px
+   .set__info
+      text-align: center
+      width: 80%
+      margin: 5px auto 0
+   .supp__box
+      flex-direction: column
+      align-items: center
+   .supp__left
+      padding-left: 0
+      margin-right: 0
+      margin-bottom: 40px
+      border: none
+   .supp__flex
+      width: max-content
+      margin: 0 auto 40px
+   .support .wallet__title
+      text-align: center
+   .supp__el
+      width: 100%
+      max-width: 509px
 @media screen and (max-width: 767px)
    .menu .button
       top: -8px
@@ -219,6 +340,8 @@
    .wallet-right__scroll 
       max-width: 102%
       width: 102%
+   #def-form 
+      max-width: 300px
 @media screen and (max-width: 576px)
    input, textarea, select 
       -webkit-appearance: none
@@ -314,3 +437,96 @@
       width: 100%
    .adaptive-table td, .adaptive-table .profile__row .active
       align-items: center
+   .set__top
+      flex-direction: column
+   .chous
+      margin-right: 0
+      margin-bottom: 20px
+   .set__size
+      text-align: center
+      margin-bottom: 10px
+   .set__browse
+      margin-left: 0
+      width: 100%
+   .calc__form__item
+      width: 100%
+   .calc__form input.name
+      width: 100%
+   .calc__form_flex
+      width: 100%
+   .calc__form input, .calc__form .lang_select--selected
+      width: 100%
+   .calc__form .main_submenu
+      width: 100%
+   .set__top
+      width: 100%
+   .calc__form .reg-form__btn
+      width: 100%
+   .checkboxes-and-radios label
+      margin-left: 10px
+   .set__info
+      width: 100%
+      font-size: 12px
+   .calc__two_code
+      width: 100%
+      height: auto
+      max-width: 300px
+   .calc__two_flex
+      width: 100%
+      margin-top: 20px
+   .calc__two_content
+      width: 100%
+   .calc__two_link
+      font-size: 17px
+      margin-top: 5px
+   .calc__three_wrap .calc__form__item
+      width: 100%
+   .calc__three_wrap
+      width: 100%
+      margin-top: 20px
+   .calc__three_wrap .calc__form__item
+      margin-bottom: 10px
+   .calc__fourth_box, .calc__fourth .calc__fourth_btn
+      width: 100%
+   .calc__fourth_pic
+      width: 68%
+   .calc__fourth_name 
+      font-size: 26px
+      line-height: 29px
+   .content p
+      font-size: 12px
+   .set > a p
+      font-size: 14px
+   .supp__item
+      flex-direction: column
+      width: 100%
+   .supp__link
+      margin-left: 0
+      display: block
+      margin: 15px auto 0
+   .supp__item:nth-child(1)
+      margin-bottom: 30px
+   .support .calc__form .reg-form__btn 
+      margin-top: 10px
+   .support .calc__form input.name, .support input.email 
+      margin-bottom: 0
+   .def__top
+      flex-direction: column
+   .def__item:first-child 
+      margin-right: 0
+      margin-bottom: 10px
+   .def__item
+      width: 100%
+   .def__flex
+      flex-direction: column
+   .def__select .lang_select 
+      width: 100%
+      margin-bottom: 10px
+   #def-form input
+      padding-left: 21px
+   .def__line
+      justify-content: flex-end
+   .wallet__title_2 
+      margin-top: 40px
+   #def-form 
+      max-width: 100%

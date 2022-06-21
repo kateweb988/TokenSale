@@ -111,18 +111,6 @@
          color: #FFFFFF
          &:hover 
             color: $orange
-.password 
-	position: relative
-.password-control, .password-control2 
-	position: absolute
-	top: 21px
-	right: 21px
-	display: inline-block
-	width: 20px
-	height: 20px
-	background: url(img/form/eye.svg) 0 0 no-repeat
-.password-control.view 
-	background: url(img/form/eye.svg) 0 0 no-repeat
 .footer__flex
    margin-top: 60px
 .reg__forgot
@@ -371,3 +359,321 @@
 .wallet-right__scroll::-webkit-scrollbar-thumb
    background-color: transparent
    border-radius: 6px
+.accordion-container 
+   position: relative
+   height: auto
+   width: 100%
+   margin: 32px 0 0
+.set
+   position: relative
+   width: 100%
+   height: auto
+   margin-bottom: 0px
+   transition: 0.5s
+   &:hover 
+      a 
+         p 
+            color: $orange
+   &:last-child
+      a
+         border: none
+      .content 
+         border: none
+.set>a
+   display: block
+   text-decoration: none
+   transition: all 0.2s linear
+   height: auto
+   width: 100%
+   background: url(img/down.svg) no-repeat 100% 50%
+   padding: 15.5px 0
+   border-bottom: 1px solid #EAEAEA
+   transition: 0.5s
+   p 
+      font-weight: 700
+      font-size: 16px
+      line-height: 21px
+      color: $black
+      transition: 0.5s
+      padding-right: 70px
+.set>a.active
+   padding-bottom: 15px
+   background: url(img/up.svg) no-repeat 100% 50%
+   border: none
+   padding-top: 18px
+.content 
+   position: relative
+   width: 100%
+   height: auto
+   display: none
+   overflow: auto
+   box-sizing: border-box
+   padding-bottom: 25px
+   border-bottom: 1px solid #EAEAEA
+   p 
+      font-weight: 400
+      font-size: 14px
+      line-height: 140%
+      color: $black
+      max-width: 734px
+.supp__left
+   max-width: 764px
+   flex: 1 0 auto 
+   width: 100%
+   padding-right: 20px
+   border-right: 1px solid #EAEAEA
+   margin-right: 27px
+.supp__flex 
+   align-items: center
+   margin-bottom: 50px
+.supp__block
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 100px
+   height: 75px
+   background: #17181E
+   border-radius: 5px
+.supp__item:nth-child(2) .supp__block
+   background: #3390EC
+   margin-left: 25px
+.supp__item
+   display: flex
+   align-items: center
+   &:hover
+      p 
+         color: $orange
+         border-bottom: 1px solid $orange
+.supp__link
+   font-weight: 400
+   font-size: 18px
+   line-height: 23px
+   margin-left: 14px
+   color: $black
+   border-bottom: 1px solid $black
+   width: max-content
+   transition: 0.5s
+.supp__title
+   font-weight: 700
+   font-size: 20px
+   line-height: 26px
+   color: $black
+   margin-bottom: 7px
+.supp__ask
+   font-weight: 400
+   font-size: 14px
+   line-height: 140%
+   margin-bottom: 26px
+   color: $black
+.supp__el
+   margin-bottom: 12px
+   max-width: 450px
+   textarea 
+      width: 100%
+      max-width: 100%
+      padding-top: 19px
+      padding-left: 19px
+      min-height: 176px
+      background: #FFFFFF
+      border: 1px solid #DADADA
+      border-radius: 5px
+      box-sizing: border-box
+      transition: 0.5s
+.support .calc__form .reg-form__btn
+   margin-top: 25px
+.body-wrap input:focus, textarea:focus 
+   border: 1px solid $orange !important
+.support
+   .supp__box 
+      height: 100%
+   .wallet-right__content
+      height: 85vh
+.def__top 
+   align-items: center
+   margin-bottom: 45px
+.def__item
+   width: 200px
+   height: 50px
+   border: 1px solid #EAEAEA
+   border-radius: 5px
+   align-items: center
+   justify-content: center
+   display: flex
+   &.active 
+      background: #0D0D0F
+      p 
+         color: #fff
+   &:hover 
+      border: 1px solid $orange
+      p 
+         color: $orange
+   &:first-child
+      margin-right: 15px
+.def__item_name
+   margin-left: 10px
+   font-weight: 400
+   font-size: 16px
+   line-height: 100%
+   color: $black
+   transition: 0.5s
+.main_submenu--lnk
+   color: $black
+#def-form
+   position: relative
+   width: 100%
+   max-width: 764px
+   input
+      width: 100%
+      height: 50px
+      background: #FFFFFF
+      border: 1px solid #EAEAEA !important
+      border-radius: 5px
+      padding-left: 32px
+      font-size: 14px
+      &:focus 
+         border: 1px solid $orange !important
+.def-form__btn
+   position: absolute
+   top: 14px
+   right: 16px
+   background: transparent
+   border: none
+.def__flex 
+   justify-content: space-between
+   margin-bottom: 15px
+.def__select
+   .lang_select
+      width: 200px
+      height: 50px
+      background: #FFFFFF
+      border: 1px solid #DADADA
+      border-radius: 5px
+      padding-left: 20px
+   .lang_select--selected
+      font-size: 14px
+      line-height: 18px
+      color: #888888
+      font-weight: normal
+   .lang_select:hover .main_submenu--list
+      width: 100%
+      transform: translateX(-50%) translateY(-30%)
+.def__body
+   .profile__row:first-child
+      td
+         border-top: 0.857372px solid #EFEFEF
+.def__line
+   align-items: center
+.def__firms
+   position: relative
+.def__logo_small
+   position: absolute
+   left: -7px
+   top: -4px
+   width: 15px
+   height: 15px
+   border-radius: 50%
+.def__name
+   margin-left: 15px
+   font-weight: 700
+   font-size: 16px
+   line-height: 100%
+   color: $black
+.def__logo
+   width: 32px
+   height: 32px
+   border-radius: 50%
+   position: relative
+   z-index: 2
+.def__core
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 0 13px
+   width: max-content
+   height: 30px
+   background: #088C60
+   border-radius: 3px
+   p 
+      color: #fff
+      font-weight: 700
+      font-size: 14px
+      line-height: 100%
+      margin-left: 10px
+.def__sub
+   font-weight: 400
+   font-size: 14px
+   line-height: 100%
+   margin-bottom: 3px
+   color: $black
+.def__sum
+   font-weight: 700
+   font-size: 16px
+   line-height: 100%
+   color: $black
+   display: flex
+   align-items: center
+   img 
+      margin-left: 8px
+.def__farm
+   width: 120px
+   height: 30px
+   margin-left: auto
+   margin-right: 20px
+.def__auction
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 0 13px
+   width: max-content
+   height: 30px
+   background: #085C8C
+   border-radius: 3px
+   p 
+      color: #fff
+      font-weight: 700
+      font-size: 14px
+      line-height: 100%
+      margin-left: 10px
+.wallet__title_2
+   margin-top: 70px
+.staking 
+   .def__logo_small
+      right: -10px
+      bottom: -6px
+      left: inherit
+      top: inherit
+      z-index: 2
+      width: 20px
+      height: 20px
+.def__name_span
+   display: block
+   font-weight: 400
+   font-size: 14px
+.def__usd
+   font-weight: 400
+   font-size: 12px
+.def__per
+   display: flex
+   width: 72px
+   height: 30px
+   border-radius: 3px
+   align-items: center
+   justify-content: center
+   font-size: 14px
+   font-weight: 700
+   color: #FFFFFF
+   margin-left: 15px
+.green .def__per
+   background: #088C60
+.red .def__per
+   background: red
+td[data-label="#"]
+   font-weight: 700 !important
+   font-size: 16px !important
+thead .svg:hover 
+   path 
+      fill: white
+.def .wallet-right__content
+   display: flex
+   flex-direction: column
+   min-height: 850px

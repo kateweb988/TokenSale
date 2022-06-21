@@ -513,3 +513,237 @@ td[data-label="Date"]
    -moz-user-select: none   
    -ms-user-select: none     
    user-select: none
+.chous 
+   text-align: center
+   cursor: pointer
+   display: flex
+   transition: all 0.18s ease-in-out
+   align-items: center
+   justify-content: center
+   box-sizing: border-box
+   width: 137px
+   height: 100px
+   background: #EAEAEA
+   border: 1px dashed #C4C4C4;
+   border-radius: 5px
+   margin-right: 32px
+.chous:hover 
+   background-position: bottom left
+   border: 1px dashed $orange
+   background: #fff
+   path 
+      fill: $orange
+.my 
+   width: 0.1px
+   height: 0.1px
+   opacity: 0
+   overflow: hidden
+   position: absolute
+   z-index: -1
+.set__size
+   font-size: 12px
+   line-height: 16px
+   color: $black
+   max-width: 126px
+   span 
+      font-weight: 700
+      font-size: 14px
+.set__top
+   align-items: center
+   margin-bottom: 33px
+.set__browse 
+   width: 120px
+   height: 40px
+   margin-left: 25px
+/* CHECK */
+.password 
+	position: relative
+.password-control, .password-control2, .password-control3, .password-control4  
+	position: absolute
+	top: 21px
+	right: 21px
+	display: inline-block
+	width: 20px
+	height: 20px
+	background: url(img/form/eye.svg) 0 0 no-repeat
+.password-control.view 
+	background: url(img/form/eye.svg) 0 0 no-repeat
+.checkboxes-and-radios 
+  width: 312px
+  margin-top: 28px
+  p 
+   margin-left: 64px
+   font-weight: 400
+   font-size: 14px
+   line-height: 18px
+   position: relative
+   top: 3px
+   transition: 0.5s
+.checkboxes-and-radios input
+  display: none
+  transition: 0.5s
+.checkboxes-and-radios label 
+  cursor: pointer
+  padding-right: 0
+  position: relative
+  display: block
+  font-size: 14px
+  color: #414C69
+  margin-bottom: 18px
+  transition: 0.5s
+  &:hover 
+   p 
+      color: $orange
+.checkboxes-and-radios input[type="checkbox"],
+.checkboxes-and-radios input[type="radio"] 
+  position: absolute
+  visibility: hidden !important
+  transition: 0.5s
+.checkboxes-and-radios input[type="checkbox"]+label:before,
+.checkboxes-and-radios input[type="radio"]+label:before,
+.checkboxes-and-radios input[type="checkbox"]+label:after,
+.checkboxes-and-radios input[type="radio"]+label:after
+  content: ''
+  position: absolute
+  top: 50%
+  margin-top: -12.5px
+  box-sizing: border-box
+  transition: 0.5s
+.checkboxes-and-radios input[type="checkbox"]+label:before,
+.checkboxes-and-radios input[type="radio"]+label:before 
+   left: 0px
+   width: 50px
+   height: 30px
+   background: #F5F6F7
+   border-radius: 99px
+   margin-right: 0
+   transition: 0.5s
+.checkboxes-and-radios input[type="checkbox"]+label:after,
+.checkboxes-and-radios input[type="radio"]+label:after 
+   width: 30px
+   height: 28px
+   left: 4px
+   top: 10px
+   background: #CBCBCB
+   border-radius: 50%
+   transition: 0.5s
+.checkboxes-and-radios input[type="checkbox"]:checked+label:after,
+.checkboxes-and-radios input[type="radio"]:checked+label:after 
+  left: 19px
+  background: #FFFFFF
+  overflow-x: hidden
+  transition: 0.5s
+.checkboxes-and-radios input[type="checkbox"]:checked+label:before 
+  background: #34C759
+  transition: 0.5s
+.calc__form
+   .lang_select:hover .main_submenu--list
+      transform: translateX(-46%) translateY(-24%)
+   .main_submenu--icon 
+      right: 12px
+      top: 24px
+   .main_submenu
+      padding-right: 0
+   .lang_select--selected
+      width: 137px
+      height: 60px
+      background: #FFFFFF
+      border: 1px solid #DADADA
+      border-radius: 5px
+      padding-left: 20px
+      font-weight: 400
+      font-size: 14px
+      line-height: 18px
+      color: #888888
+   .reg-form__btn
+      width: 294px
+      height: 60px
+      margin-top: 57px
+   input::-webkit-input-placeholder
+      color: #888888 !important
+   input::-moz-placeholder 
+      color: #888888 !important
+   input:-ms-input-placeholder
+      color: #888888 !important
+   input:-moz-placeholder 
+      color: #888888 !important
+   .calc__form__item
+      label 
+         font-size: 14px
+         line-height: 18px
+         margin-bottom: 5px
+         color: $black
+         display: block
+   input 
+      border: 1px solid #DADADA !important
+      width: 450px
+      margin-right: 20px
+      height: 60px
+      margin-bottom: 0
+   .password-control, .password-control2, .password-control3, .password-control4
+      right: 35px
+.reg-form input.name
+   background: url(img/form/name.svg) no-repeat 18px 17px
+   background-color: #FFFFFF
+.calc__form_flex
+   margin-bottom: 51px
+.settings .wallet-right__content
+   display: flex
+   flex-direction: column
+   height: 89vh
+.set__info
+   font-weight: 400
+   font-size: 14px
+   line-height: 18px
+   max-width: 914px
+   color: $black
+.calc__two_flex
+   margin-top: 37px
+   align-items: center
+.calc__two_code
+   width: 294px
+   height: 294px
+   margin-right: 46px
+.calc__two_text
+   font-weight: 400
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   margin-bottom: 12px
+.calc__two_info
+   font-weight: 700
+   font-size: 16px
+   line-height: 140%
+   color: $black
+   span 
+      color: $orange
+.calc__two_link
+   font-weight: 700
+   font-size: 24px
+   line-height: 140%
+   color: $orange
+   &:hover 
+      color: $black
+.calc__three_wrap
+   margin-top: 31px
+   .calc__form__item
+      margin-bottom: 20px
+      width: max-content
+.calc__fourth_box
+   max-width: 411px
+   text-align: center
+   color: $black
+   margin-left: 356px
+   margin-top: 20px
+.calc__fourth_name
+   font-weight: 700
+   font-size: 36px
+   line-height: 47px
+   margin: 3px 0 10px
+.calc__fourth_text
+   font-size: 14px
+   line-height: 160%
+.calc__fourth .calc__fourth_btn
+   width: 294px
+   height: 60px
+   margin: 25px auto 0
