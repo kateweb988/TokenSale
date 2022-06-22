@@ -468,6 +468,7 @@
 .supp__el
    margin-bottom: 12px
    max-width: 450px
+   position: relative
    textarea 
       width: 100%
       max-width: 100%
@@ -666,7 +667,7 @@
 .green .def__per
    background: #088C60
 .red .def__per
-   background: red
+   background: #FB461E
 td[data-label="#"]
    font-weight: 700 !important
    font-size: 16px !important
@@ -677,3 +678,280 @@ thead .svg:hover
    display: flex
    flex-direction: column
    min-height: 850px
+.token__body tr td:last-child
+   margin: 0 auto 
+   text-align: right
+   .btn 
+      margin-left: auto
+      margin-right: 25px
+.stat 
+   text-align: right !important
+   padding-right: 56px !important
+.done .table__btn 
+   background: #088C60
+.process .table__btn 
+   background: #FBA51E
+   &:hover 
+      border: 1px solid #FBA51E
+      color: #FBA51E
+.denide .table__btn 
+   background: #FB461E
+   &:hover 
+      border: 1px solid #FB461E
+      color: #FB461E
+.zae label 
+  text-align: left
+  font-size: 11px
+  color: rgba(42, 51, 63, 0.65)
+input#agree 
+  margin-right: 14px
+  width: 20px
+  height: 20px
+  border: 1px solid #D7D7E4
+  flex: 1 0 auto
+  max-width: 20px
+.zae 
+  margin-top: 15px
+.zae label
+   font-weight: 400
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   cursor: pointer
+   &:hover:before 
+      border: 1px solid $orange
+   a 
+      color: $orange
+      &:hover 
+         color: $black
+input[type=checkbox] 
+  display: none
+input[type=checkbox]+label:before 
+  content: "\2713"
+  color: transparent
+  display: inline-block
+  border: 1px solid #D7D7E4
+  font-size: 14px
+  line-height: 19px
+  margin: -5px 10px 0 0
+  height: 20px
+  width: 20px
+  text-align: center
+  vertical-align: middle
+  transition: 0.5s
+  border-radius: 5px
+  box-sizing: border-box
+  cursor: pointer
+input[type=checkbox]:checked+label:before 
+   color: #fff
+   border: 1px solid transparent
+   background: #FBA51E
+.token-order
+   margin-top: 20px
+   width: 535px
+   height: 454px
+   border: 4px solid #FBA51E
+   border-radius: 5px
+   padding: 24px 40px
+   input 
+      padding-left: 24px
+   .supp__el
+      position: relative
+.token-order__link 
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 80px
+   height: 40px
+   background: #FFFFFF
+   border: 1px solid #DADADA
+   border-radius: 5px
+   margin-right: 10px
+   margin-bottom: 5px
+   &:hover 
+      border: 1px solid $orange
+   &:last-child
+      margin-right: 0
+.token-order__icon
+   width: 20px
+   height: 20px
+   -webkit-filter: grayscale(1)
+   filter: gray
+   filter: grayscale(1)
+.token-order__name
+   font-size: 14px
+   line-height: 18px
+   color: #9F9F9F
+   margin-left: 6px
+.token-order__link.active 
+   background: linear-gradient(75.07deg, #8BDCFA 4.93%, #A9FFE0 100%)
+   p 
+      color: $black
+   .token-order__icon
+      -webkit-filter: inherit
+      filter: inherit
+.token-order__tabs
+   margin-bottom: 15px
+   flex-wrap: wrap
+.token-order__item
+   position: absolute
+   right: 15px
+   top: 46px
+   font-size: 14px
+   color: #888888
+input.inactive 
+   pointer-events: none
+   background: #F5F5F5
+.token-order__sum
+   font-weight: 500
+   font-size: 14px
+   line-height: 18px
+   color: #888888
+   position: absolute
+   left: 23px
+   top: 43px
+.token-order__flex  
+   justify-content: space-between
+   width: 100%
+   .calc__form__item
+      width: 48% !important
+      input 
+         width: 100%
+      &:first-child
+         input
+            margin-right: 20px
+.token-order__btn 
+   width: 215px
+   height: 60px
+   font-weight: 700
+   font-size: 14px
+   margin-top: 25px
+.wallet__all
+   font-weight: 700
+   font-size: 14px
+   color: $orange
+   width: max-content 
+   border-bottom: 1px solid $orange
+   margin-top: 20px
+   margin-left: auto
+   margin-right: 55px
+   &:hover 
+      color: $black
+      border-bottom: 1px solid $black
+.wallet__all_table
+   margin-top: 10px
+   margin-right: 0
+/*POPUP*/
+.box-modal__close:hover 
+  transform: rotate(90deg)
+.box-modal__close 
+   position: absolute
+   top: 14px
+   right: 14px
+   transition: all 0.5s ease
+   z-index: 100
+   cursor: pointer
+   @media ( max-width: 576px )
+      right: 15px
+      top: 15px
+.box-modal 
+   position: relative
+.popup-call__box 
+   position: absolute
+   margin-left: -304px
+   top: 50%
+   left: 50%
+   margin-top: -300px
+   box-sizing: border-box
+   height: auto
+   width: 608px
+   height: auto
+   background: #FFFFFF
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
+   border-radius: 5px
+   padding: 53px 110px
+   @media screen and (max-width: 768px)
+      width: 500px
+      margin-left: -250px
+      padding: 40px 20px
+      .popup__code
+         width: 100%
+         height: auto
+   @media screen and (max-width: 576px)
+      width: 100% !important
+      left: 0 !important
+      margin-left: 0 !important
+.popup__name
+   margin-bottom: 30px
+   font-weight: 700
+   font-size: 24px
+   line-height: 31px
+   color: $black
+.popup__code
+   width: 386px
+   height: 386px
+   margin: 0 auto
+#code .popup__name
+   text-align: center
+.popup__info
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   margin-bottom: 20px
+.popup__sum
+   font-weight: 700
+   font-size: 14px
+   line-height: 18px
+   color: $black
+   margin-left: 5px
+.popup .calc__form input
+   width: 100%
+#p1 .popup-call__box 
+   padding: 46px 40px 20px
+   width: 530px
+   margin-left: -265px
+   .supp__el
+      max-width: 100%
+   .token-order__btn
+      width: 294px
+      height: 60px
+   input 
+      padding-left: 28px
+#success .popup-call__box 
+   padding: 46px 40px 20px
+   width: 530px
+   margin-left: -265px
+   .calc__fourth_btn
+      width: 294px
+      height: 60px
+      margin: 20px auto 0
+   .calc__fourth_name 
+      font-size: 32px
+      line-height: 34px
+      margin: 0px 0 20px
+   .calc__fourth_pic
+      width: 156.49px
+      height: 129.6px
+   .calc__fourth_box
+      margin-left: 0
+      max-width: 100%
+      margin-top: 0
+   .wallet-item__link
+      width: max-content
+      display: flex
+      align-items: center
+      transition: 0.5s
+      font-size: 16px
+      margin: 10px auto 0
+      p  
+         color: #027DC2
+         border-bottom: 1px solid #027DC2
+         transition: 0.5s
+      path 
+         fill: #027DC2
+      &:hover 
+         p
+            color: $orange
+            border-bottom: 1px solid $orange
+         path 
+            fill: $orange

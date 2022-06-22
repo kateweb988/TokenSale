@@ -61,6 +61,17 @@
 		<li style="width: 25%; margin: 40px auto;">
 			<a href="def2.html" style="font-weight: bold; font-size: 25px; display: block; text-align: center;">Def2</a>
 		</li>
+		<li style="width: 25%; margin: 10px auto;">
+			<a href="token.html" style="font-weight: bold; font-size: 25px; display: block; text-align: center;">Token</a>
+		</li>
+		<li style="width: 25%; margin: 10px auto;">
+			<a href="dashboard.html"
+				style="font-weight: bold; font-size: 25px; display: block; text-align: center;">Dashboard</a>
+		</li>
+		<li style="width: 25%; margin: 10px auto;">
+			<a href="dashboard2.html"
+				style="font-weight: bold; font-size: 25px; display: block; text-align: center;">Dashboard2</a>
+		</li>
 	</ul>
 	<div class="d-flex"
 		style="justify-content: space-between; margin-top: 80px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
@@ -70,44 +81,98 @@
 		<a href="#" class="btn btn2 p1" style="margin: 20px;">
 			Load More
 		</a>
+		<a href="#" class="btn btn2 p5" style="margin: 20px;">
+			Success
+		</a>
 		<a href="#" class="btn btn3 p2" style="margin: 20px;">
 			Load More
 		</a>
 	</div>
 
 	<div style="display:none;">
-		<div class="box-modal pop1" id="pop6">
+		<div class="box-modal" id="code">
 			<div class="popup">
 				<div class="popup-call__box">
 					<div class="box-modal__close articmodal-close">
 						<img src="css/img/close.svg" alt="" class="svg">
 					</div>
-					<div class="popup__flex d-flex">
-						<div class="popup__left">
-							<img src="css/img/logo.svg" alt="" class="popup__logo">
-							<img src="css/img/popup.png" alt="" class="popup__pic">
-						</div>
-						<div class="popup__right">
-							<p class="popup__title">
-								Войти
-							</p>
-							<form action="" class="settings-form">
-								<div class="settings__el">
-									<div class="setting-form__item">
-										<label>Логин:</label> <br>
-										<input type="text" name="name" placeholder="John Johnson" class="name">
-									</div>
-									<div class="setting-form__item">
-										<label>Пароль:</label> <br>
-										<input type="password" name="pass1" placeholder="****************" class="pass">
-									</div>
-								</div>
-								<button class="settings-form__btn btn btn2">
-									Вход
-								</button>
-							</form>
-						</div>
+					<p class="popup__name">Scan this code with your phone</p>
+					<img src="css/img/form/code.png" alt="" class="popup__code">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="success">
+			<div class="popup">
+				<div class="popup-call__box">
+					<div class="box-modal__close articmodal-close">
+						<img src="css/img/close.svg" alt="" class="svg">
 					</div>
+					<div class="calc__fourth_box">
+						<img src="css/img/form/saly.png" alt="" class="calc__fourth_pic">
+						<p class="calc__fourth_name">
+							Transaction created
+							successfully!
+						</p>
+						<p class="calc__fourth_text">
+							Transaction HASH
+						</p>
+						<a href="#" class="wallet-item__link">
+							<p>
+								3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+							</p>
+							<img src="css/img/wallet/copy.svg" alt="" class="wallet-item__copy svg">
+						</a>
+						<a href="#" class="calc__fourth_btn btn btn1">
+							Done
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="display:none;">
+		<div class="box-modal" id="p1">
+			<div class="popup">
+				<div class="popup-call__box">
+					<div class="box-modal__close articmodal-close">
+						<img src="css/img/close.svg" alt="" class="svg">
+					</div>
+					<p class="popup__name">Send ETH</p>
+					<form action="success.php" class="reg-form calc__form js-form" id="popupResult" method="post">
+						<div class="calc__elem calc__one">
+							<div class="calc__form__item supp__el">
+								<label>Send Address</label>
+								<input type="text" name="send" placeholder="0xjywkt4a3g54q6a54eryh+kw4k">
+							</div>
+							<div class="calc__form__item supp__el">
+								<label>Amount Tokens</label>
+								<input type="number" name="email" placeholder="52">
+								<p class="token-order__item">ETH</p>
+							</div>
+							<div class="calc__form__item supp__el">
+								<label>USD</label>
+								<input type="number" name="usd" placeholder="65 589" class="inactive">
+								<p class="token-order__item">USD</p>
+							</div>
+							<div class="popup__info d-flex">
+								<p class="popup__text">
+									Сommission Amount
+								</p>
+								<p class="popup__sum">
+									15.963 USD
+								</p>
+							</div>
+							<div class="calc__form__item supp__el">
+								<label>Confirmation Code</label>
+								<input type="password" name="confirm" placeholder="********************">
+							</div>
+							<button class="token-order__btn btn btn1">
+								Send
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

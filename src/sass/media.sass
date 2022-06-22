@@ -147,6 +147,24 @@
          display: none !important
    .def .wallet-right__content
       min-height: auto
+   .token__body tr td:last-child 
+      flex-direction: column
+      margin: 0 auto
+      align-items: center
+      width: 100%
+      border-right: none !important
+      &:before
+         margin-right: 0
+         margin-bottom: 10px
+   .token__body tr td:last-child .btn
+      margin: 0 auto
+   .token-order
+      margin: 20px auto 0
+      height: auto
+   .wallet__all
+      margin: 20px auto 0
+   .wallet__all_table 
+      margin-top: 0
 @media ( max-width: 991px )
    .burger 
       position: fixed
@@ -327,6 +345,12 @@
    .supp__el
       width: 100%
       max-width: 509px
+   .zae 
+      margin-top: 0
+   #p1 .popup-call__box input
+      margin-bottom: 0
+   .popup__info
+      margin-right: auto
 @media screen and (max-width: 767px)
    .menu .button
       top: -8px
@@ -405,7 +429,7 @@
       margin-bottom: 15px
    .wallet-item
       padding: 20px 20px 30px
-      width: 88%
+      width: auto
    .wallet-item__link
       font-size: 12px
    .menu .button 
@@ -530,3 +554,33 @@
       margin-top: 40px
    #def-form 
       max-width: 100%
+   .token-order
+      width: 100%
+      padding: 25px 10px
+      .supp__el
+         margin-bottom: 0
+   .token-order__flex
+      flex-direction: column 
+      .supp__el
+         width: 100% !important
+   .token-order__btn
+      width: 100%
+   .token-order__link
+      margin-right: 5px
+   .wallet__all_table 
+      margin-top: -20px
+   .arcticmodal-container_i
+      width: 100%
+   .popup__name 
+      margin-bottom: 20px
+      font-size: 21px
+      line-height: 27px
+   #p1 .popup-call__box .token-order__btn, #success .popup-call__box .calc__fourth_btn
+      width: 100%
+   #p1 .popup-call__box, #success .popup-call__box
+      padding: 40px 20px
+   #success .popup-call__box .wallet-item__link p
+      font-size: 12px
+   #success .popup-call__box .calc__fourth_name 
+      font-size: 27px
+      line-height: 31px
