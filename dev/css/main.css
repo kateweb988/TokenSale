@@ -2124,8 +2124,8 @@ td[data-label="Date"] {
 
 .wallet-right__scroll {
   overflow-x: auto;
-  max-width: 104%;
-  width: 104%;
+  max-width: 102%;
+  width: 102%;
   padding-bottom: 25px;
   margin-bottom: 25px;
   -webkit-touch-callout: none;
@@ -2831,7 +2831,9 @@ td[data-label="Date"] {
   #p1 .popup-call__box input {
     margin-bottom: 0; }
   .popup__info {
-    margin-right: auto; } }
+    margin-right: auto; }
+  .popup-call__box {
+    margin-top: -44vh; } }
 
 @media screen and (max-width: 767px) {
   .menu .button {
@@ -3067,8 +3069,6 @@ td[data-label="Date"] {
   #success .popup-call__box .calc__fourth_name {
     font-size: 27px;
     line-height: 31px; }
-  .popup-call__box {
-    margin-top: -100%; }
   .selectCF {
     width: 100%;
     margin-bottom: 10px;
