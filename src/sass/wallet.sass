@@ -8,6 +8,7 @@
    display: flex
    flex-direction: column
    position: fixed
+   transition: 0.5s
    .footer__text
       margin-right: 0
       margin-top: auto
@@ -20,6 +21,8 @@
    width: 100%
    padding-left: 292px
    padding-bottom: 25px
+   overflow-y: auto
+   transition: 0.5s
 .wallet__logo
    width: 150px
    display: block
@@ -355,6 +358,7 @@ html * /* override x.xhtml.ru style */
    transition: 0.5s
 .wallet-right__content
    padding: 50px 30px 0 43px
+   overflow: hidden
 .wallet-item__btn
    color: #088C60
 .wallet-item
@@ -372,6 +376,8 @@ html * /* override x.xhtml.ru style */
          color: #343434
 .wallet-right__flex
    margin-bottom: 0px
+   overflow-x: auto
+   padding-bottom: 20px
 .wallet-item__flex
    justify-content: space-between
    align-items: center
@@ -489,11 +495,12 @@ td[data-label="Date"]
       border-bottom: 1px solid $orange
 .wallet 
    .footer
-      padding-top: 23px
+      padding-top: 40px
       a 
          color: #888888
 .wallet-left__hide
    position: absolute
+   transition: 0.5s
    right: 27px
    top: 28px
    &:hover
@@ -503,8 +510,8 @@ td[data-label="Date"]
       display: none
 .wallet-right__scroll 
    overflow-x: auto
-   max-width: 102%
-   width: 102%
+   max-width: 104%
+   width: 104%
    padding-bottom: 25px
    margin-bottom: 25px
    -webkit-touch-callout: none
@@ -693,7 +700,8 @@ td[data-label="Date"]
 .settings .wallet-right__content
    display: flex
    flex-direction: column
-   height: 89vh
+   height: auto
+   min-height: 89vh
 .set__info
    font-weight: 400
    font-size: 14px
@@ -750,3 +758,34 @@ td[data-label="Date"]
    width: 294px
    height: 60px
    margin: 25px auto 0
+.wallet-left_small
+   max-width: 84px !important
+   transition: 0.5s
+   padding: 26px 10px
+   .wallet-left__hide 
+      position: absolute;
+      right: 0
+      top: 28px
+      transform: rotate(180deg)
+   .wallet-left__list
+      li
+         display: flex
+         justify-content: center
+         .svg 
+            margin: 0 auto
+         a
+            padding-left: 0
+            width: 100%
+      p
+         display: none
+   .wallet__logo 
+      overflow: hidden
+      white-space: nowrap
+      max-width: 38px
+      position: relative
+      left: 6px
+      img 
+         width: auto
+         height: auto
+.wallet-left_small ~ .wallet-right
+   padding-left: 68px 

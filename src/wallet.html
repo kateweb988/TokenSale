@@ -475,7 +475,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -498,7 +498,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -521,7 +521,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -544,7 +544,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -567,7 +567,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -590,7 +590,7 @@
 									<td class="active" data-label="Date">June 26, 2017 5:59 AM</td>
 									<td class="active" data-label="Token">
 										<div class="table__row d-flex">
-											<img src="css/img/wallet/3.png" alt="" class="table__logo">
+											<img src="css/img/wallet/t.svg" alt="" class="table__logo">
 											<p class="table__text">
 												USDT
 											</p>
@@ -639,32 +639,6 @@
 			</div>
 		</section>
 	</div>
-	<script>
-		(function () {
-			let speed = 2; // Скорость скролла.
-
-			let scroll = document.querySelector('.wallet-right__scroll');
-
-			let left = 0; // отпустили мышку - сохраняем положение скролла
-			let drag = false;
-			let coorX = 0; // нажали мышку - сохраняем координаты.
-
-			scroll.addEventListener('mousedown', function (e) {
-				drag = true;
-				coorX = e.pageX - this.offsetLeft;
-			});
-			document.addEventListener('mouseup', function () {
-				drag = false;
-				left = scroll.scrollLeft;
-			});
-			scroll.addEventListener('mousemove', function (e) {
-				if (drag) {
-					this.scrollLeft = left - (e.pageX - this.offsetLeft - coorX) * speed;
-				}
-			});
-
-		})();
-	</script>
 	<script src="js/all.js"></script>
 </body>
 

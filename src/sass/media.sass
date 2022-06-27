@@ -1,6 +1,9 @@
-@media screen and (max-width: 1799px) 
+@media screen and (max-width: 1850px) 
    .supp__left
       max-width: 529px
+   .reg__left
+      padding: 44px 300px 53px 64px
+// @media screen and (max-width: 1699px) 
 @media screen and (max-width: 1599px) 
    .supp__flex
       flex-direction: column
@@ -9,9 +12,12 @@
       margin-left: 0
    .supp__item:nth-child(1)
       margin-bottom: 20px
+   .reg__left 
+      padding: 44px 44vh 53px 64px
+@media screen and (max-width: 1499px) 
+      .reg__left 
+         padding: 44px 446px 53px 64px
 @media screen and (max-width: 1399px) 
-   .reg__left
-      padding: 44px !important
    .wallet-left 
       max-width: 250px
       padding: 26px 30px 25px 19px
@@ -45,13 +51,36 @@
       img 
          flex: 1 0 auto 
          max-width: 16px
+   .supp__left 
+      max-width: 502px
+   .footer__text
+      margin-left: -6px
+   .wallet-left_small ~ .wallet-right
+      padding-left: 83px 
+      .wallet-right__content
+         padding-left: 43px
+   .wallet-left_small .wallet__logo
+      left: -2px
 @media screen and (max-width: 1199px) 
+   .wallet-left_small .wallet-left__list p
+      display: block
+   .wallet-left_small .wallet__logo
+      width: 150px
+      max-width: 100% 
+      left: 0
+      img 
+         width: 100%
+         height: 100%
+   .wallet-left_small ~ .wallet-right 
+      padding-left: 0
+      .wallet-right__content
+         padding-left: 20px
    .wallet__box
       flex-direction: column
    .wallet-left
       height: auto
-      width: 100%
-      max-width: 100%
+      width: 100% !important
+      max-width: 100% !important
       position: relative
    .wallet-right
       padding-left: 0
@@ -165,6 +194,11 @@
       margin: 20px auto 0
    .wallet__all_table 
       margin-top: 0
+   .reg__right
+      display: none
+   .reg__left
+      margin: 0 auto
+      padding: 40px
 @media ( max-width: 991px )
    .burger 
       position: fixed
@@ -255,8 +289,6 @@
          text-align: center
          margin-bottom: 20px
          display: block
-   .reg__right
-      display: none
    .wallet-right__top
       display: none !important
    .burger .wallet-right__top 
@@ -584,3 +616,27 @@
    #success .popup-call__box .calc__fourth_name 
       font-size: 27px
       line-height: 31px
+   .popup-call__box
+      margin-top: -100%
+   .selectCF
+      width: 100%
+      margin-bottom: 10px
+      border: 1px solid #EAEAEA
+      z-index: 2
+   .selectCF li ul
+      left: -1px
+      width: 100.5%
+   .test6
+      a 
+         width: 100%
+         margin: 0 0 10px
+   .test5
+      flex-direction: column
+      li
+         width: 100% !important
+         margin: 10px auto !important
+         a 
+            font-size: 16px !important
+@media screen and (max-width: 340px)
+   .selectCF li ul
+      width: 100.7%

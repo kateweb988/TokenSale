@@ -26,9 +26,140 @@ null);d(".arcticmodal-container").length||(b.wrap.data("arcticmodalOverflow")&&b
 d.fn.arcticmodal=function(a){if(h[a])return h[a].apply(this,Array.prototype.slice.call(arguments,1));if("object"===typeof a||!a)return f.init.apply(this,arguments);d.error("jquery.arcticmodal: Method "+a+" does not exist")}})(jQuery);
 document.addEventListener("DOMContentLoaded", () => {
 });
-$(document).ready(function () {
-   $('.js-example-basic-single').select2();
-});
+
+(function ($) {
+   var elActive = '';
+   $.fn.selectCF = function (options) {
+
+      // option
+      var settings = $.extend({
+         color: "#888888", // color
+         backgroundColor: "#FFFFFF", // background
+         change: function () { }, // event change
+      }, options);
+
+      return this.each(function () {
+
+         var selectParent = $(this);
+         list = [],
+            html = '';
+
+         //parameter CSS
+         var width = $(selectParent).width();
+
+         $(selectParent).hide();
+         if ($(selectParent).children('option').length == 0) { return; }
+         $(selectParent).children('option').each(function () {
+            if ($(this).is(':selected')) { s = 1; title = $(this).text(); } else { s = 0; }
+            list.push({
+               value: $(this).attr('value'),
+               text: $(this).text(),
+               selected: s,
+            })
+         })
+
+         // style
+         var style = " background: " + settings.backgroundColor + "; color: " + settings.color + " ";
+
+         html += "<ul class='selectCF'>";
+         html += "<li>";
+         html += "<span class='arrowCF ion-chevron-right' style='" + style + "'></span>";
+         html += "<span class='titleCF' style='" + style + "; width:" + width + "px'>" + title + "</span>";
+         html += "<span class='searchCF' style='" + style + "; width:" + width + "px'><input style='color:" + settings.color + "' /></span>";
+         html += "<ul>";
+         $.each(list, function (k, v) {
+            s = (v.selected == 1) ? "selected" : "";
+            html += "<li value=" + v.value + " class='" + s + "'>" + v.text + "</li>";
+         })
+         html += "</ul>";
+         html += "</li>";
+         html += "</ul>";
+         $(selectParent).after(html);
+         var customSelect = $(this).next('ul.selectCF'); // add Html
+         var seachEl = $(this).next('ul.selectCF').children('li').children('.searchCF');
+         var seachElOption = $(this).next('ul.selectCF').children('li').children('ul').children('li');
+         var seachElInput = $(this).next('ul.selectCF').children('li').children('.searchCF').children('input');
+
+         // handle active select
+         $(customSelect).unbind('click').bind('click', function (e) {
+            e.stopPropagation();
+            if ($(this).hasClass('onCF')) {
+               elActive = '';
+               $(this).removeClass('onCF');
+               $(this).removeClass('searchActive'); $(seachElInput).val('');
+               $(seachElOption).show();
+            } else {
+               if (elActive != '') {
+                  $(elActive).removeClass('onCF');
+                  $(elActive).removeClass('searchActive'); $(seachElInput).val('');
+                  $(seachElOption).show();
+               }
+               elActive = $(this);
+               $(this).addClass('onCF');
+               $(seachEl).children('input').focus();
+            }
+         })
+
+         // handle choose option
+         var optionSelect = $(customSelect).children('li').children('ul').children('li');
+         $(optionSelect).bind('click', function (e) {
+            var value = $(this).attr('value');
+            if ($(this).hasClass('selected')) {
+               //
+            } else {
+               $(optionSelect).removeClass('selected');
+               $(this).addClass('selected');
+               $(customSelect).children('li').children('.titleCF').html($(this).html());
+               $(selectParent).val(value);
+               settings.change.call(selectParent); // call event change
+            }
+         })
+
+         // handle search 
+         $(seachEl).children('input').bind('keyup', function (e) {
+            var value = $(this).val();
+            if (value) {
+               $(customSelect).addClass('searchActive');
+               $(seachElOption).each(function () {
+                  if ($(this).text().search(new RegExp(value, "i")) < 0) {
+                     // not item
+                     $(this).fadeOut();
+                  } else {
+                     // have item
+                     $(this).fadeIn();
+                  }
+               })
+            } else {
+               $(customSelect).removeClass('searchActive');
+               $(seachElOption).fadeIn();
+            }
+         })
+
+      });
+   };
+   $(document).click(function () {
+      if (elActive != '') {
+         $(elActive).removeClass('onCF');
+         $(elActive).removeClass('searchActive');
+      }
+   })
+}(jQuery));
+
+$(function () {
+   var event_change = $('#event-change');
+   $(".select").selectCF({
+      change: function () {
+         var value = $(this).val();
+         var text = $(this).children('option:selected').html();
+         console.log(value + ' : ' + text);
+         event_change.html(value + ' : ' + text);
+      }
+   });
+   $(".test").selectCF({
+      color: "#FFF",
+      backgroundColor: "#663052",
+   });
+})
 $('.articmodal-close').click(function (e) {
    $.arcticmodal('close');
 
@@ -87,62 +218,6 @@ $('body').on('click', '.password-control4', function () {
       $('#password-input4').attr('type', 'password');
    }
    return false;
-});
-$(document).ready(function () {
-   $('.select').each(function () {
-      const _this = $(this),
-         selectOption = _this.find('option'),
-         selectOptionLength = selectOption.length,
-         selectedOption = selectOption.filter(':selected'),
-         duration = 450; // длительность анимации 
-
-      _this.hide();
-      _this.wrap('<div class="select"></div>');
-      $('<div>', {
-         class: 'new-select',
-         text: _this.children('option:disabled').text()
-      }).insertAfter(_this);
-
-      const selectHead = _this.next('.new-select');
-      $('<div>', {
-         class: 'new-select__list'
-      }).insertAfter(selectHead);
-
-      const selectList = selectHead.next('.new-select__list');
-      for (let i = 1; i < selectOptionLength; i++) {
-         $('<div>', {
-            class: 'new-select__item',
-            html: $('<span>', {
-               text: selectOption.eq(i).text()
-            })
-         })
-            .attr('data-value', selectOption.eq(i).val())
-            .appendTo(selectList);
-      }
-
-      const selectItem = selectList.find('.new-select__item');
-      selectList.slideUp(0);
-      selectHead.on('click', function () {
-         if (!$(this).hasClass('on')) {
-            $(this).addClass('on');
-            selectList.slideDown(duration);
-
-            selectItem.on('click', function () {
-               let chooseItem = $(this).data('value');
-
-               $('select').val(chooseItem).attr('selected', 'selected');
-               selectHead.text($(this).find('span').text());
-
-               selectList.slideUp(duration);
-               selectHead.removeClass('on');
-            });
-
-         } else {
-            $(this).removeClass('on');
-            selectList.slideUp(duration);
-         }
-      });
-   });
 });
 // Burger
 $('.menu .button').click(function (event) {
@@ -245,3 +320,27 @@ jQuery('img.svg').each(function () {
    }, 'xml');
 
 });
+(function () {
+   let speed = 2; // Скорость скролла.
+
+   let scroll = document.querySelector('.wallet-right__flex');
+
+   let left = 0; // отпустили мышку - сохраняем положение скролла
+   let drag = false;
+   let coorX = 0; // нажали мышку - сохраняем координаты.
+
+   scroll.addEventListener('mousedown', function (e) {
+      drag = true;
+      coorX = e.pageX - this.offsetLeft;
+   });
+   document.addEventListener('mouseup', function () {
+      drag = false;
+      left = scroll.scrollLeft;
+   });
+   scroll.addEventListener('mousemove', function (e) {
+      if (drag) {
+         this.scrollLeft = left - (e.pageX - this.offsetLeft - coorX) * speed;
+      }
+   });
+
+})();
