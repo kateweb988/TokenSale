@@ -1902,6 +1902,17 @@ ul.info li {
   color: #FBA51E;
 }
 
+.text-danger {
+  color: #fb1e1e;
+  padding: 5px 0;
+  transform: rotateX(90deg);
+  transform-origin: 0 0;
+  transition: transform 0.3s;
+}
+.text-danger.view {
+  transform: rotateX(0);
+}
+
 .wallet-left {
   flex: 1 0 auto;
   width: 100%;
