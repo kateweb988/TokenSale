@@ -1,5 +1,5 @@
-.wallet-left 
-   flex: 1 0 auto 
+.wallet-left
+   flex: 1 0 auto
    width: 100%
    max-width: 300px
    background: $black
@@ -26,33 +26,33 @@
 .wallet__logo
    width: 150px
    display: block
-   img 
+   img
       width: 100%
       height: 100%
 .wallet-left__list
    margin-top: 63px
-   .active 
-      p 
+   .active
+      p
          color:#FBA51E
-      path 
+      path
          fill:  #FBA51E
-   a 
+   a
       align-items: center
       width: 240px
       height: 50px
       margin-bottom: 1px
       border-radius: 5px
       padding-left: 37px
-      &:hover 
+      &:hover
          background: #0D0D0F
-      p 
+      p
          font-size: 16px
          line-height: 320%
          color: #FFFFFF
          margin-left: 25px
 .select
    box-sizing: border-box
-   appearance: none 
+   appearance: none
    // background: url(img/wallet/down.svg) no-repeat right
    background-position-x: calc(100% - 6px)
    cursor: pointer
@@ -77,14 +77,14 @@
       border-radius: 50%
       background: $orange
       margin-right: 12px
-   &:after 
+   &:after
       content: ""
       display: block
       background: url(img/wallet/down.svg) no-repeat right
       width: 12px
       height: 12px
       margin-left: 8px
-.new-select 
+.new-select
    cursor: pointer
    user-select: none
    overflow: visible
@@ -97,7 +97,7 @@
    text-overflow: ellipsis
    white-space: nowrap
    max-width: 150px
-.new-select__list 
+.new-select__list
    position: absolute
    top: 20px
    left: 0
@@ -113,16 +113,16 @@
    background: rgb(227, 227, 227)
 .new-select__list.on
    display: block
-.new-select__item span 
+.new-select__item span
    display: block
    padding: 9px 19px 9px 23px
    color: black
    border-bottom: 1px solid #E8E8E8
    font-size: 14px
-.new-select__item span:hover 
+.new-select__item span:hover
    color: white
    background: $orange
-.new-select:after 
+.new-select:after
    content: ''
    display: block
    width: 100%
@@ -138,14 +138,14 @@
    -ms-transform: rotate(0deg)
    -o-transform: rotate(0deg)
    transform: rotate(0deg)
-.new-select.on:after 
+.new-select.on:after
    -webkit-transform: rotate(180deg)
    -ms-transform: rotate(180deg)
    -o-transform: rotate(180deg)
    transform: rotate(180deg)
 .arcticmodal-container::-webkit-scrollbar-track, .arcticmodal-container::-webkit-scrollbar-track
    background: transparent
-html * /* override x.xhtml.ru style */ 
+html * /* override x.xhtml.ru style */
    scrollbar-width: thin
    scrollbar-color: blue orange
 *::-webkit-scrollbar, html *::-webkit-scrollbar
@@ -154,33 +154,34 @@ html * /* override x.xhtml.ru style */
 .arcticmodal-container::-webkit-scrollbar, .arcticmodal-container::-webkit-scrollbar
    width: 1px
    height: 1px
-*::-webkit-scrollbar-track, html *::-webkit-scrollbar-track 
+*::-webkit-scrollbar-track, html *::-webkit-scrollbar-track
    background: #E7E7E7
    border-radius: 3px
 *::-webkit-scrollbar-thumb, html *::-webkit-scrollbar-thumb
    background-color: $orange
    border-radius: 6px
-.adaptive-table 
+.adaptive-table
    width: 100%
    box-sizing: border-box
    border-collapse: collapse !important
    border-spacing: 0px 15px !important
-   td 
+   td
       padding: 15px 5px
       font-weight: 400
       font-size: 14px
       box-sizing: border-box
       color: $black
-@media (max-width: 1199px) 
+@media (max-width: 1199px)
    .adaptive-table,
-   .adaptive-table .profile__operation 
-      a 
+   .adaptive-table .profile__operation
+      a
          font-size: 11px
    .adaptive-table
       thead, .profile__head
          display: none
-   .adaptive-table 
-     tbody, .adaptive-table, 
+   .adaptive-table
+     tbody,
+     .adaptive-table
          width: 100%
          display: flex
          flex-wrap: wrap
@@ -190,23 +191,23 @@ html * /* override x.xhtml.ru style */
          padding-top: 10px
          padding-bottom: 10px
    .adaptive-table
-      tr 
+      tr
          margin: 5px
          width: 300px
          max-width: 100%
          display: flex
          flex-direction: column
    .adaptive-table
-      td, .profile__row .active 
+      td, .profile__row .active
          display: flex
          justify-content: space-between
-   .adaptive-table 
-      td[data-label] 
+   .adaptive-table
+      td[data-label]
          justify-content: space-between
          text-align: right
    .adaptive-table
       td[data-label]
-         &:before 
+         &:before
             line-height: 120%
             content: attr(data-label)
             display: block
@@ -221,7 +222,7 @@ html * /* override x.xhtml.ru style */
 .profile__table
    border-collapse: collapse
    margin-bottom: 17px
-   tr 
+   tr
       border-bottom: 0.857372px solid #EFEFEF
       box-sizing: border-box
       &:last-child
@@ -238,16 +239,16 @@ html * /* override x.xhtml.ru style */
          box-shadow: initial
          td
             font-weight: 400
-            font-size: 14px 
+            font-size: 14px
             color: white
             padding: 18px 20px 18px 6px
             font-weight: normal !important
-   @media (max-width: 768px) 
+   @media (max-width: 768px)
       background: transparent
       margin-top: 0
       td
          background: #fff
-      td[data-label="Name"] 
+      td[data-label="Name"]
          padding-right: 5px
 .profile__row
    border-collapse: separate
@@ -264,7 +265,7 @@ html * /* override x.xhtml.ru style */
    top: 17px
 .adaptive-table
    border-collapse: separate
-   tr 
+   tr
       @media ( max-width: 991px )
          margin: 15px
          &:nth-child(n+7)
@@ -283,7 +284,7 @@ html * /* override x.xhtml.ru style */
 .scan__table
    border-collapse: separate !important
    border-spacing: 0px !important
-   thead 
+   thead
       td
          border: none
          &:first-child
@@ -311,17 +312,17 @@ html * /* override x.xhtml.ru style */
          margin-left: 5px
       .table__flex_main
          min-width: 170px
-.menu, .burger 
+.menu, .burger
    display: none
 .wallet-right__link
    font-size: 14px
    line-height: 18px
    color: $black
    margin-left: 10px
-   &:hover 
-      color: $orange 
-.wallet-right__lan 
-   .active 
+   &:hover
+      color: $orange
+.wallet-right__lan
+   .active
       a
          color: $orange !important
          font-weight: 700
@@ -329,7 +330,7 @@ html * /* override x.xhtml.ru style */
    align-items: center
 .wallet-right__info
    margin-left: 20px
-.wallet-right__ava 
+.wallet-right__ava
    border: 1px solid #FBA51E
    display: flex
    align-items: center
@@ -339,13 +340,13 @@ html * /* override x.xhtml.ru style */
    border-radius: 50%
    background: #C4C4C4
    box-shadow: inset 0 0 0 2px #fff
-   img 
+   img
       width: auto
       height: auto
 .wallet-right__info
    align-items: center
    cursor: pointer
-   &:hover 
+   &:hover
       .wallet-right__name
          color: $orange
 .wallet-right__name
@@ -418,23 +419,23 @@ html * /* override x.xhtml.ru style */
    white-space: nowrap
    font-weight: 400
    font-size: 14px
-   color: white 
+   color: white
    display: flex
    align-items: center
-   .svg 
+   .svg
       margin-left: 10px
-   &:hover 
+   &:hover
       color: $orange
-      path 
+      path
          fill: $orange
-.wallet-item__btn 
+.wallet-item__btn
    width: 85px
    height: 40px
    background: #FFFFFF
 .wallet-item__bottom
-   align-items: center 
+   align-items: center
    justify-content: space-between
-.wallet-item__row 
+.wallet-item__row
    justify-content: space-between
    width: 100%
    flex-wrap: wrap
@@ -447,7 +448,7 @@ html * /* override x.xhtml.ru style */
    font-size: 24px
    line-height: 31px
    color: $black
-.table__btn 
+.table__btn
    width: 91px
    height: 25px
    background: #088C60
@@ -456,11 +457,11 @@ html * /* override x.xhtml.ru style */
    font-weight: 400
    font-size: 12px
    border: 1px solid transparent
-   &:hover 
+   &:hover
       background: transparent
       color: #088C60
       border: 1px solid #088C60
-.wallet__load 
+.wallet__load
    width: 140px
    height: 40px
    margin: 0 auto
@@ -468,7 +469,7 @@ html * /* override x.xhtml.ru style */
 td[data-label="Amount"]
    font-weight: 700
    font-size: 14px
-td[data-label="Date"] 
+td[data-label="Date"]
    font-size: 14px
    line-height: 100%
    color: #888888
@@ -491,12 +492,12 @@ td[data-label="Date"]
    color: #027DC2
    border-bottom: 1px solid #027DC2
    width: max-content
-   &:hover 
+   &:hover
       border-bottom: 1px solid $orange
-.wallet 
+.wallet
    .footer
       padding-top: 40px
-      a 
+      a
          color: #888888
 .wallet-left__hide
    position: absolute
@@ -504,26 +505,26 @@ td[data-label="Date"]
    right: 27px
    top: 28px
    &:hover
-      path 
+      path
          fill: white
    @media ( max-width: 1200px )
       display: none
-.wallet-right__scroll 
+.wallet-right__scroll
    overflow-x: auto
    max-width: 102%
    width: 102%
    padding-bottom: 25px
    margin-bottom: 25px
    -webkit-touch-callout: none
-   -webkit-user-select: none  
-   -khtml-user-select: none   
-   -moz-user-select: none   
-   -ms-user-select: none     
+   -webkit-user-select: none
+   -khtml-user-select: none
+   -moz-user-select: none
+   -ms-user-select: none
    user-select: none
    flex-wrap: wrap
    display: flex
    align-items: center
-.chous 
+.chous
    text-align: center
    cursor: pointer
    display: flex
@@ -534,16 +535,16 @@ td[data-label="Date"]
    width: 137px
    height: 100px
    background: #EAEAEA
-   border: 1px dashed #C4C4C4;
+   border: 1px dashed #C4C4C4
    border-radius: 5px
    margin-right: 32px
-.chous:hover 
+.chous:hover
    background-position: bottom left
    border: 1px dashed $orange
    background: #fff
-   path 
+   path
       fill: $orange
-.my 
+.my
    width: 0.1px
    height: 0.1px
    opacity: 0
@@ -555,33 +556,33 @@ td[data-label="Date"]
    line-height: 16px
    color: $black
    max-width: 126px
-   span 
+   span
       font-weight: 700
       font-size: 14px
 .set__top
    align-items: center
    margin-bottom: 33px
-.set__browse 
+.set__browse
    width: 120px
    height: 40px
    margin-left: 25px
 /* CHECK */
-.password 
-	position: relative
-.password-control, .password-control2, .password-control3, .password-control4  
-	position: absolute
-	top: 21px
-	right: 21px
-	display: inline-block
-	width: 20px
-	height: 20px
-	background: url(img/form/eye.svg) 0 0 no-repeat
-.password-control.view 
-	background: url(img/form/eye.svg) 0 0 no-repeat
-.checkboxes-and-radios 
+.password
+   position: relative
+.password-control, .password-control2, .password-control3, .password-control4
+   position: absolute
+   top: 21px
+   right: 21px
+   display: inline-block
+   width: 20px
+   height: 20px
+   background: url(img/form/eye.svg) 0 0 no-repeat
+.password-control.view
+   background-image: url(img/form/eye_view.svg)
+.checkboxes-and-radios
   width: 312px
   margin-top: 28px
-  p 
+  p
    margin-left: 64px
    font-weight: 400
    font-size: 14px
@@ -592,7 +593,7 @@ td[data-label="Date"]
 .checkboxes-and-radios input
   display: none
   transition: 0.5s
-.checkboxes-and-radios label 
+.checkboxes-and-radios label
   cursor: pointer
   padding-right: 0
   position: relative
@@ -601,11 +602,11 @@ td[data-label="Date"]
   color: #414C69
   margin-bottom: 18px
   transition: 0.5s
-  &:hover 
-   p 
+  &:hover
+   p
       color: $orange
 .checkboxes-and-radios input[type="checkbox"],
-.checkboxes-and-radios input[type="radio"] 
+.checkboxes-and-radios input[type="radio"]
   position: absolute
   visibility: hidden !important
   transition: 0.5s
@@ -620,7 +621,7 @@ td[data-label="Date"]
   box-sizing: border-box
   transition: 0.5s
 .checkboxes-and-radios input[type="checkbox"]+label:before,
-.checkboxes-and-radios input[type="radio"]+label:before 
+.checkboxes-and-radios input[type="radio"]+label:before
    left: 0px
    width: 50px
    height: 30px
@@ -629,7 +630,7 @@ td[data-label="Date"]
    margin-right: 0
    transition: 0.5s
 .checkboxes-and-radios input[type="checkbox"]+label:after,
-.checkboxes-and-radios input[type="radio"]+label:after 
+.checkboxes-and-radios input[type="radio"]+label:after
    width: 30px
    height: 28px
    left: 4px
@@ -638,18 +639,18 @@ td[data-label="Date"]
    border-radius: 50%
    transition: 0.5s
 .checkboxes-and-radios input[type="checkbox"]:checked+label:after,
-.checkboxes-and-radios input[type="radio"]:checked+label:after 
+.checkboxes-and-radios input[type="radio"]:checked+label:after
   left: 19px
   background: #FFFFFF
   overflow-x: hidden
   transition: 0.5s
-.checkboxes-and-radios input[type="checkbox"]:checked+label:before 
+.checkboxes-and-radios input[type="checkbox"]:checked+label:before
   background: #34C759
   transition: 0.5s
 .calc__form
    .lang_select:hover .main_submenu--list
       transform: translateX(-46%) translateY(-24%)
-   .main_submenu--icon 
+   .main_submenu--icon
       right: 12px
       top: 24px
    .main_submenu
@@ -671,20 +672,20 @@ td[data-label="Date"]
       margin-top: 57px
    input::-webkit-input-placeholder
       color: #888888 !important
-   input::-moz-placeholder 
+   input::-moz-placeholder
       color: #888888 !important
    input:-ms-input-placeholder
       color: #888888 !important
-   input:-moz-placeholder 
+   input:-moz-placeholder
       color: #888888 !important
    .calc__form__item
-      label 
+      label
          font-size: 14px
          line-height: 18px
          margin-bottom: 5px
          color: $black
          display: block
-   input 
+   input
       border: 1px solid #DADADA !important
       width: 450px
       margin-right: 20px
@@ -726,14 +727,14 @@ td[data-label="Date"]
    font-size: 16px
    line-height: 140%
    color: $black
-   span 
+   span
       color: $orange
 .calc__two_link
    font-weight: 700
    font-size: 24px
    line-height: 140%
    color: $orange
-   &:hover 
+   &:hover
       color: $black
 .calc__three_wrap
    margin-top: 31px
@@ -762,8 +763,8 @@ td[data-label="Date"]
    max-width: 84px !important
    transition: 0.5s
    padding: 26px 10px
-   .wallet-left__hide 
-      position: absolute;
+   .wallet-left__hide
+      position: absolute
       right: 0
       top: 28px
       transform: rotate(180deg)
@@ -771,21 +772,21 @@ td[data-label="Date"]
       li
          display: flex
          justify-content: center
-         .svg 
+         .svg
             margin: 0 auto
          a
             padding-left: 0
             width: 100%
       p
          display: none
-   .wallet__logo 
+   .wallet__logo
       overflow: hidden
       white-space: nowrap
       max-width: 38px
       position: relative
       left: 6px
-      img 
+      img
          width: auto
          height: auto
 .wallet-left_small ~ .wallet-right
-   padding-left: 68px 
+   padding-left: 68px

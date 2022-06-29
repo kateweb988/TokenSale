@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const autoprefix = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
@@ -58,9 +58,7 @@ function htmlsBuild() {
 // Dev
 function styles() {
 	return gulp.src('src/sass/main.sass')
-		.pipe(sass({
-			errorLogToConsole: true
-		}))
+		.pipe(sass().on('error', sass.logError))
 		.on('error', console.error.bind(console))
 		.pipe(gulp.dest('dev/css'))
 		.pipe(browserSync.stream());

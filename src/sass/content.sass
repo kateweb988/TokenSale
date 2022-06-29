@@ -1,7 +1,7 @@
 .reg
    background: $black
    height: 100%
-   .container 
+   .container
       display: flex
       flex-direction: column
       height: 100%
@@ -20,7 +20,7 @@
    overflow: hidden
    right: 0
    top: 0
-   &:after 
+   &:after
       content: ""
       display: block
       position: absolute
@@ -64,7 +64,7 @@
    flex-direction: column
    margin: 0 auto
    height: 100vh
-   .footer 
+   .footer
       max-width: 895px
       margin: auto auto 0
       width: 100%
@@ -86,7 +86,7 @@
    margin-bottom: 47px
 .reg-form
    width: 100%
-   input 
+   input
       width: 100%
       height: 60px
       background: #FFFFFF
@@ -95,7 +95,7 @@
       font-size: 14px
       border: none
       margin-bottom: 25px
-      &.pass 
+      &.pass
          background: url(img/form/lock.svg) no-repeat 16px 17px
          background-color: #FFFFFF
       &.email
@@ -106,7 +106,7 @@
    height: 60px
    font-size: 16px
    margin-top: 20px
-.footer 
+.footer
    padding-bottom: 10px
 .footer__text
    font-weight: 500
@@ -114,16 +114,16 @@
    line-height: 16px
    color: #737373
    margin-right: 20px
-.footer__list 
+.footer__list
    flex-wrap: wrap
-   li 
-      margin-right: 25px 
-      a 
+   li
+      margin-right: 25px
+      a
          font-weight: 500
          font-size: 12px
          line-height: 16px
          color: #FFFFFF
-         &:hover 
+         &:hover
             color: $orange
 .footer__flex
    margin-top: 60px
@@ -137,10 +137,10 @@
    display: block
    width: max-content
    border-bottom: 1px solid #fff
-   &:hover 
+   &:hover
       color: $orange
       border-bottom: 1px solid $orange
-.forgot 
+.forgot
    .reg__name
       margin-bottom: 10px !important
 .reg__sub
@@ -150,7 +150,7 @@
 .footer__text2
    display: none
 
-.header--lang 
+.header--lang
    position: relative
    display: flex
    align-items: center
@@ -165,44 +165,41 @@
       background: $orange
       margin-right: 12px
 .main_menu
-	position: relative
-	display: flex
-	height: 100px
-	&--item
-		display: flex
-		align-items: center
-		padding: 0 20px
-	&--lnk
-		transition: color .2s
-		&:hover
-	&--close_button
-		display: none
-	@media ( max-width: 1000px )
-		margin-right: -20px
-		padding-right: 20px
-		padding-top: 40px
-		padding-bottom: 15px
-		height: 100%
-		flex-direction: column
-		overflow-y: scroll
-		&--item
-			padding: 10px 20px
-		&--close_button
-			display: block
-		&--close_icon
-			position: absolute
-			right: 30px
-			top: 10px
-			width: 12px
-			height: 12px
-			&:hover
+   position: relative
+   display: flex
+   height: 100px
+   &--item
+      display: flex
+      align-items: center
+      padding: 0 20px
+   &--lnk
+      transition: color .2s
+   &--close_button
+      display: none
+   @media ( max-width: 1000px )
+      margin-right: -20px
+      padding-right: 20px
+      padding-top: 40px
+      padding-bottom: 15px
+      height: 100%
+      flex-direction: column
+      overflow-y: scroll
+      &--item
+         padding: 10px 20px
+      &--close_button
+         display: block
+      &--close_icon
+         position: absolute
+         right: 30px
+         top: 10px
+         width: 12px
+         height: 12px
 .main_submenu
    position: relative
    padding-right: 40px
    cursor: pointer
    @media( max-width: 992px )
       margin-right: -15px
-   &--btn
    &--icon
       position: absolute
       top: calc(50% - 6px)
@@ -226,7 +223,7 @@
       box-shadow: 0px 0px 28px rgba(0, 0, 0, 0.1)
       transition: transform .2s, opacity .2s
       z-index: 100
-      @media( min-width: 1001px ) 										
+      @media( min-width: 1001px )
          transform: translateX(-50%) translateY(150px)
          opacity: 0
          visibility: hidden
@@ -251,10 +248,8 @@
       transition: color .2s
       &-padding_equal
          padding: 10px 15px
-      &:hover
    &:hover
-      .main_submenu--btn
-      @media( min-width: 1001px ) 											// раскрытие подпунктов меню в PC версии (до 1001px)
+      @media( min-width: 1001px )                                  // раскрытие подпунктов меню в PC версии (до 1001px)
          .main_submenu--icon
             transform: rotate(-180deg)
          .main_submenu--list
@@ -311,11 +306,11 @@
             z-index: auto
             &:before
                display: none
-			.main_submenu--lnk
-				padding: 10px
-			.main_submenu.active
-				.main_submenu--icon
-					transform: rotate(-180deg)
+         .main_submenu--lnk
+            padding: 10px
+         .main_submenu.active
+            .main_submenu--icon
+               transform: rotate(-180deg)
 .lang_select
    position: relative
    display: flex
@@ -329,7 +324,7 @@
       align-items: center
       cursor: pointer
       transition: 0.5s
-      &:hover 
+      &:hover
          color: $orange
       @media( max-width: 992px )
          color: #fff
@@ -341,27 +336,27 @@
             visibility: hidden
          .main_submenu--subitem
             transform: rotateX(90deg)
-			&:hover											// раскрытие подпунктов меню в PC версии (до 1001px)
-				.main_submenu--icon
-					transform: rotate(-180deg)
-				.main_submenu--list
-					transform: translateX(-50%) translateY(-31%)
-					opacity: 1
-					visibility: visible
-				.main_submenu--subitem
-					transform: rotateX(0)
-					opacity: 1
-					transition-delay: .3s
-					&:nth-child(1)
-						transition-delay: .05s
-					&:nth-child(2)
-						transition-delay: .1s
-					&:nth-child(3)
-						transition-delay: .15s
-					&:nth-child(4)
-						transition-delay: .2s
-					&:nth-child(5)
-						transition-delay: .25s
+         &:hover                                 // раскрытие подпунктов меню в PC версии (до 1001px)
+            .main_submenu--icon
+               transform: rotate(-180deg)
+            .main_submenu--list
+               transform: translateX(-50%) translateY(-31%)
+               opacity: 1
+               visibility: visible
+            .main_submenu--subitem
+               transform: rotateX(0)
+               opacity: 1
+               transition-delay: .3s
+               &:nth-child(1)
+                  transition-delay: .05s
+               &:nth-child(2)
+                  transition-delay: .1s
+               &:nth-child(3)
+                  transition-delay: .15s
+               &:nth-child(4)
+                  transition-delay: .2s
+               &:nth-child(5)
+                  transition-delay: .25s
       @media( max-width: 575px )
          transform: translateX(-56%) translateY(-31%)
 .wallet-right__scroll::-webkit-scrollbar, .wallet-right__flex::-webkit-scrollbar
@@ -373,7 +368,7 @@
 .wallet-right__scroll::-webkit-scrollbar-thumb, .wallet-right__flex::-webkit-scrollbar-thumb
    background-color: transparent
    border-radius: 6px
-.accordion-container 
+.accordion-container
    position: relative
    height: auto
    width: 100%
@@ -384,14 +379,14 @@
    height: auto
    margin-bottom: 0px
    transition: 0.5s
-   &:hover 
-      a 
-         p 
+   &:hover
+      a
+         p
             color: $orange
    &:last-child
       a
          border: none
-      .content 
+      .content
          border: none
 .set>a
    display: block
@@ -403,7 +398,7 @@
    padding: 15.5px 0
    border-bottom: 1px solid #EAEAEA
    transition: 0.5s
-   p 
+   p
       font-weight: 700
       font-size: 16px
       line-height: 21px
@@ -415,7 +410,7 @@
    background: url(img/up.svg) no-repeat 100% 50%
    border: none
    padding-top: 18px
-.content 
+.content
    position: relative
    width: 100%
    height: auto
@@ -424,7 +419,7 @@
    box-sizing: border-box
    padding-bottom: 25px
    border-bottom: 1px solid #EAEAEA
-   p 
+   p
       font-weight: 400
       font-size: 14px
       line-height: 140%
@@ -432,12 +427,12 @@
       max-width: 734px
 .supp__left
    max-width: 764px
-   flex: 1 0 auto 
+   flex: 1 0 auto
    width: 100%
    padding-right: 20px
    border-right: 1px solid #EAEAEA
    margin-right: 27px
-.supp__flex 
+.supp__flex
    align-items: center
    margin-bottom: 50px
 .supp__block
@@ -455,7 +450,7 @@
    display: flex
    align-items: center
    &:hover
-      p 
+      p
          color: $orange
          border-bottom: 1px solid $orange
 .supp__link
@@ -483,7 +478,7 @@
    margin-bottom: 12px
    max-width: 450px
    position: relative
-   textarea 
+   textarea
       width: 100%
       max-width: 100%
       padding-top: 19px
@@ -496,17 +491,17 @@
       transition: 0.5s
 .support .calc__form .reg-form__btn
    margin-top: 25px
-.body-wrap input:focus, textarea:focus 
+.body-wrap input:focus, textarea:focus
    border: 1px solid $orange !important
 .support
    .wallet-right
       padding-bottom: 18px
-   .supp__box 
+   .supp__box
       height: 100%
    .wallet-right__content
       height: auto
       min-height: 89vh
-.def__top 
+.def__top
    align-items: center
    margin-bottom: 45px
 .def__item
@@ -517,13 +512,13 @@
    align-items: center
    justify-content: center
    display: flex
-   &.active 
+   &.active
       background: #0D0D0F
-      p 
+      p
          color: #fff
-   &:hover 
+   &:hover
       border: 1px solid $orange
-      p 
+      p
          color: $orange
    &:first-child
       margin-right: 15px
@@ -548,7 +543,7 @@
       border-radius: 5px
       padding-left: 32px
       font-size: 14px
-      &:focus 
+      &:focus
          border: 1px solid $orange !important
 .def-form__btn
    position: absolute
@@ -556,7 +551,7 @@
    right: 16px
    background: transparent
    border: none
-.def__flex 
+.def__flex
    justify-content: space-between
    margin-bottom: 15px
 .def__select
@@ -611,7 +606,7 @@
    height: 30px
    background: #088C60
    border-radius: 3px
-   p 
+   p
       color: #fff
       font-weight: 700
       font-size: 14px
@@ -630,7 +625,7 @@
    color: $black
    display: flex
    align-items: center
-   img 
+   img
       margin-left: 8px
 .def__farm
    width: 120px
@@ -646,7 +641,7 @@
    height: 30px
    background: #085C8C
    border-radius: 3px
-   p 
+   p
       color: #fff
       font-weight: 700
       font-size: 14px
@@ -654,7 +649,7 @@
       margin-left: 10px
 .wallet__title_2
    margin-top: 70px
-.staking 
+.staking
    .def__logo_small
       right: -10px
       bottom: -6px
@@ -688,49 +683,49 @@
 td[data-label="#"]
    font-weight: 700 !important
    font-size: 16px !important
-thead .svg:hover 
-   path 
+thead .svg:hover
+   path
       fill: white
 .def .wallet-right__content
    display: flex
    flex-direction: column
    min-height: 850px
 .token__body tr td:last-child
-   margin: 0 auto 
+   margin: 0 auto
    text-align: right
-   .btn 
+   .btn
       margin-left: auto
       margin-right: 25px
-.stat 
+.stat
    text-align: right !important
    padding-right: 56px !important
-.done .table__btn 
+.done .table__btn
    background: #088C60
    pointer-events: none
-.process .table__btn 
+.process .table__btn
    background: #FBA51E
    pointer-events: none
-   // &:hover 
+   // &:hover
    //    border: 1px solid #FBA51E
    //    color: #FBA51E
-.denide .table__btn 
+.denide .table__btn
    background: #FB461E
    pointer-events: none
-   // &:hover 
+   // &:hover
    //    border: 1px solid #FB461E
    //    color: #FB461E
-.zae label 
+.zae label
   text-align: left
   font-size: 11px
   color: rgba(42, 51, 63, 0.65)
-input#agree 
+input#agree
   margin-right: 14px
   width: 20px
   height: 20px
   border: 1px solid #D7D7E4
   flex: 1 0 auto
   max-width: 20px
-.zae 
+.zae
   margin-top: 15px
 .zae label
    font-weight: 400
@@ -738,15 +733,15 @@ input#agree
    line-height: 18px
    color: $black
    cursor: pointer
-   &:hover:before 
+   &:hover:before
       border: 1px solid $orange
-   a 
+   a
       color: $orange
-      &:hover 
+      &:hover
          color: $black
-input[type=checkbox] 
+input[type=checkbox]
   display: none
-input[type=checkbox]+label:before 
+input[type=checkbox]+label:before
   content: "\2713"
   color: transparent
   display: inline-block
@@ -762,7 +757,7 @@ input[type=checkbox]+label:before
   border-radius: 5px
   box-sizing: border-box
   cursor: pointer
-input[type=checkbox]:checked+label:before 
+input[type=checkbox]:checked+label:before
    color: #fff
    border: 1px solid transparent
    background: #FBA51E
@@ -773,11 +768,11 @@ input[type=checkbox]:checked+label:before
    border: 4px solid #FBA51E
    border-radius: 5px
    padding: 24px 40px
-   input 
+   input
       padding-left: 24px
    .supp__el
       position: relative
-.token-order__link 
+.token-order__link
    display: flex
    align-items: center
    justify-content: center
@@ -788,7 +783,7 @@ input[type=checkbox]:checked+label:before
    border-radius: 5px
    margin-right: 10px
    margin-bottom: 5px
-   &:hover 
+   &:hover
       border: 1px solid $orange
    &:last-child
       margin-right: 0
@@ -803,9 +798,9 @@ input[type=checkbox]:checked+label:before
    line-height: 18px
    color: #9F9F9F
    margin-left: 6px
-.token-order__link.active 
+.token-order__link.active
    background: linear-gradient(75.07deg, #8BDCFA 4.93%, #A9FFE0 100%)
-   p 
+   p
       color: $black
    .token-order__icon
       -webkit-filter: inherit
@@ -819,7 +814,7 @@ input[type=checkbox]:checked+label:before
    top: 46px
    font-size: 14px
    color: #888888
-input.inactive 
+input.inactive
    pointer-events: none
    background: #F5F5F5
 .token-order__sum
@@ -830,17 +825,17 @@ input.inactive
    position: absolute
    left: 23px
    top: 43px
-.token-order__flex  
+.token-order__flex
    justify-content: space-between
    width: 100%
    .calc__form__item
       width: 48% !important
-      input 
+      input
          width: 100%
       &:first-child
          input
             margin-right: 20px
-.token-order__btn 
+.token-order__btn
    width: 215px
    height: 60px
    font-weight: 700
@@ -850,21 +845,21 @@ input.inactive
    font-weight: 700
    font-size: 14px
    color: $orange
-   width: max-content 
+   width: max-content
    border-bottom: 1px solid $orange
    margin-top: 20px
    margin-left: auto
    margin-right: 71px
-   &:hover 
+   &:hover
       color: $black
       border-bottom: 1px solid $black
 .wallet__all_table
    margin-top: 10px
    margin-right: 0
 /*POPUP*/
-.box-modal__close:hover 
+.box-modal__close:hover
   transform: rotate(90deg)
-.box-modal__close 
+.box-modal__close
    position: absolute
    top: 14px
    right: 14px
@@ -874,9 +869,9 @@ input.inactive
    @media ( max-width: 576px )
       right: 15px
       top: 15px
-.box-modal 
+.box-modal
    position: relative
-.popup-call__box 
+.popup-call__box
    position: absolute
    margin-left: -304px
    top: 50%
@@ -926,7 +921,7 @@ input.inactive
    margin-left: 5px
 .popup .calc__form input
    width: 100%
-#p1 .popup-call__box 
+#p1 .popup-call__box
    padding: 46px 40px 20px
    width: 530px
    margin-left: -265px
@@ -935,9 +930,9 @@ input.inactive
    .token-order__btn
       width: 294px
       height: 60px
-   input 
+   input
       padding-left: 28px
-#success .popup-call__box 
+#success .popup-call__box
    padding: 46px 40px 20px
    width: 530px
    margin-left: -265px
@@ -945,7 +940,7 @@ input.inactive
       width: 294px
       height: 60px
       margin: 20px auto 0
-   .calc__fourth_name 
+   .calc__fourth_name
       font-size: 32px
       line-height: 34px
       margin: 0px 0 20px
@@ -963,17 +958,17 @@ input.inactive
       transition: 0.5s
       font-size: 16px
       margin: 10px auto 0
-      p  
+      p
          color: #027DC2
          border-bottom: 1px solid #027DC2
          transition: 0.5s
-      path 
+      path
          fill: #027DC2
-      &:hover 
+      &:hover
          p
             color: $orange
             border-bottom: 1px solid $orange
-         path 
+         path
             fill: $orange
 
 /* SELECT */
@@ -995,10 +990,10 @@ input.inactive
    border: 1px solid #DADADA
    border-radius: 5px
    transition: 0.5s
-   &:hover 
+   &:hover
       border: 1px solid $orange
 .selectCF li
-   list-style:none
+   list-style: none
    cursor: pointer
    perspective: 900px
    -webkit-perspective: 900px
@@ -1045,19 +1040,19 @@ input.inactive
    top: 3px
    right: 0
    z-index: -1
-@keyframes searchActive 
+@keyframes searchActive
   from
-   transform: rotateY(180deg) 
+   transform: rotateY(180deg)
   to
    transform: rotateY(0deg)
-@-moz-keyframes searchActive 
+@-moz-keyframes searchActive
   from
-   transform: rotateY(180deg) 
+   transform: rotateY(180deg)
   to
    transform: rotateY(0deg)
-@-webkit-keyframes searchActive 
+@-webkit-keyframes searchActive
   from
-   -webkit-transform: rotateY(180deg) 
+   -webkit-transform: rotateY(180deg)
   to
    -webkit-transform: rotateY(0deg)
 .searchActive .searchCF
@@ -1080,7 +1075,7 @@ input.inactive
    outline: none !important
 .selectCF li ul
    display: none
-   position:absolute
+   position: absolute
    top: 100%
    left: 0%
    padding: 0 !important
@@ -1091,7 +1086,7 @@ input.inactive
    transition: .2s
    -webkit-transition: .2s
    z-index: 2
-   background:rgba(253,253,253,.9)
+   background: rgba(253,253,253,.9)
    box-sizing: border-box
 .selectCF li ul li
    padding: 9px 0 9px 20px
@@ -1102,12 +1097,12 @@ input.inactive
    overflow: hidden
    text-overflow: ellipsis
    white-space: nowrap
-   border: 1px solid #DADADA 
+   border: 1px solid #DADADA
    border-top: none
    box-sizing: border-box
    height: 34px
    &:first-child
-      border-top: 1px solid #DADADA 
+      border-top: 1px solid #DADADA
    &:last-child
       border-radius: 0px 0px 5px 5px
 .selectCF li ul li:hover
@@ -1123,16 +1118,16 @@ input.inactive
 .onCF .arrowCF
   transform: rotate(180deg)
   -webkit-transform: rotate(180deg)
-@-moz-keyframes effect1 
+@-moz-keyframes effect1
   from
    transform: translateY(15px)
    opacity: 0
   to
    transform: translateY(0px)
    opacity: s1
-@-webkit-keyframes effect1 
+@-webkit-keyframes effect1
   from
-   -webkit-transform: translateY(15px) 
+   -webkit-transform: translateY(15px)
    opacity: 0
   to
    -webkit-transform: translateY(0px)
