@@ -881,6 +881,16 @@
 										<a href="#">
 											<img src="css/img/table/down.svg" alt="" class="svg">
 										</a>
+
+										<div class="question"> <!-- Этот блок только для PC версии. Для мобильной нужно в каждой строке таблицы выводить отдельно (код в строках 928 - 936) -->
+											<img src="css/img/question-circle-white.svg" alt="" class="question__icon"> <!-- серая иконка question-circle-grey.svg -->
+											<div class="question__hint question__hint_bottom"> <!-- question__hint_bottom - для вывода снизу. question__hint_right - справа (Но в мобильной версии - снизу) -->
+												<span class="question__line">Total value locked (TVL) is the overall</span> <!-- question__line (этот span необазстельный) выводит принудительно в строку. Иначе будет перенос по словам -->
+												<span class="question__line">value of crypto assets deposited in a</span> <!-- Обязательно нужно следить за мобильной версией. С большими текстами могут быть траблы -->
+												<span class="question__line">decentralized finance.</span>
+											</div>
+										</div>
+
 									</td>
 									<td class="active">Volume 24H</td>
 									<td class="active">Volume 7D</td>
@@ -900,10 +910,31 @@
 												USDT - BNB
 											</p>
 											<div class="def__per">0.01%</div>
+
+											<div class="question">
+												<img src="css/img/question-circle-grey.svg" alt="" class="question__icon">
+												<div class="question__hint question__hint_right">
+													Commission level in the pool
+												</div>
+											</div>
+
 										</div>
+
 									</td>
 									<td class="active" data-label="TVL">
-										<p class="def__sum">$639 932 456</p>
+										<div class="d-flex">
+											<p class="def__sum">$639 932 456</p>
+
+											<div class="question question_mobile">
+												<img src="css/img/question-circle-grey.svg" alt="" class="question__icon">
+												<div class="question__hint question__hint_bottom">
+													<span class="question__line">Total value locked (TVL) is the overall</span>
+													<span class="question__line">value of crypto assets deposited in a</span>
+													<span class="question__line">decentralized finance.</span>
+												</div>
+											</div>
+										</div>
+
 									</td>
 									<td class="active" data-label="Volume 24H">
 										<p class="def__sum">$58 030 598</p>
@@ -926,6 +957,14 @@
 												USDT - BNB
 											</p>
 											<div class="def__per">0.01%</div>
+
+											<div class="question">
+												<img src="css/img/question-circle-grey.svg" alt="" class="question__icon">
+												<div class="question__hint question__hint_right">
+													Commission level in the pool
+												</div>
+											</div>
+
 										</div>
 									</td>
 									<td class="active" data-label="TVL">
@@ -952,6 +991,14 @@
 												USDT - BNB
 											</p>
 											<div class="def__per">0.01%</div>
+
+											<div class="question">
+												<img src="css/img/question-circle-grey.svg" alt="" class="question__icon">
+												<div class="question__hint question__hint_right">
+													Commission level in the pool
+												</div>
+											</div>
+
 										</div>
 									</td>
 									<td class="active" data-label="TVL">
